@@ -14,6 +14,7 @@ import { adoptersDefault } from '../components/layouts/adopters/adopters-content
 import Adopters from '../components/layouts/adopters/adopters'
 import Stats from '../components/layouts/stats/stats'
 import IconWrapper from '../components/freestanding/icon/icon-wrapper'
+import YoutubeEmbed from "../components/youtubeembed";
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -72,7 +73,11 @@ const IndexPage = () => {
         }
         image={<img loading="lazy" alt="" src={hydraProcess} />}
       />
+
+      <YoutubeEmbed embedId="tlO9p2E501A" />
+      
       <Newsletter preselect="hydra" />
+
 
       <FeatureImage
         overline={'Start in minutes'}
