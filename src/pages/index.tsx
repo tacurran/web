@@ -16,6 +16,7 @@ import heroIllustration from '../images/illustrations/hero.svg'
 import headlessIllustration from '../images/illustrations/examplelogin.svg'
 import dashboardIllustration from '../images/illustrations/dashboard.svg'
 import codeboxIllustration from '../images/illustrations/codebox.svg'
+import { featuresDefault } from '../components/layouts/features/features-content'
 
 import SEO from '../components/layouts/seo/seo'
 import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
@@ -254,62 +255,7 @@ const IndexPage = () => {
         }
       />
 
-      <Features
-        overline={'Modular Integration'}
-        title={<>Auth integration in 1.. 2.. done</>}
-        buttons={
-          <Button
-            to={'https://console.ory.sh/registration'}
-            style={'link'}
-            iconRight={ArrowRightThemed}
-          >
-            Request Access
-          </Button>
-        }
-        feature={[
-          {
-            icon: Code,
-            title: <>Ory is open source</>,
-            description: (
-              <>
-                Ory's heart and soul are rooted in Open Source. Our commitment
-                to open software will stay unchanged.
-              </>
-            )
-          },
-          {
-            icon: UserPlus,
-            title: <>No limits on identities</>,
-            description: (
-              <>
-                Dont pay for Monthly Active Users. Pay for what you use.Choose a
-                transparent plan that adapts to your needs.
-              </>
-            )
-          },
-          {
-            icon: CirclesThreePlus,
-            title: <>More features</>,
-            description: (
-              <>
-                Ory draws from a large set of features: IAM, Permissions and
-                Roles, Zero-Trust, OAuth2, OIDC, Integrations and more.
-              </>
-            )
-          },
-          {
-            icon: LockOpen,
-            title: <>No lock in</>,
-            description: (
-              <>
-                We support the migration from Ory open source to Ory as a
-                Service, and the other way around. Don't worry about lock in.
-              </>
-            )
-          }
-        ]}
-      />
-
+      <Features {...featuresDefault} />
       <Quotes {...quotesDefault} />
       <Quickstart {...quickstartDefault} />
     </Layout>
