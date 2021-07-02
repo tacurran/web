@@ -3,7 +3,7 @@ const fetch = require('node-fetch')
 
 const trimLeft = (s, charlist) => {
   if (charlist === undefined) {
-    charlist = '\s'
+    charlist = 's'
   }
 
   return s.replace(new RegExp('^[' + charlist + ']+'), '')
@@ -13,7 +13,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const result = await graphql(`
     {
-      allMdx(filter: {frontmatter: { published: {ne: false} }}) {
+      allMdx(filter: { frontmatter: { published: { ne: false } } }) {
         edges {
           node {
             fileAbsolutePath
@@ -32,18 +32,22 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMdx.edges
-    .forEach(({ node }) => {
-      const template = node.fileAbsolutePath.indexOf('pages/blog') > -1
-        ? path.resolve(`src/templates/blog.tsx`)
-        : path.resolve(`src/templates/page.tsx`)
+  result.data.allMdx.edges.forEach(({ node }) => {
+    let template = path.resolve(`src/templates/page.tsx`)
+    if (node.fileAbsolutePath.indexOf('pages/blog') > -1) {
+      template = path.resolve(`src/templates/blog.tsx`)
+    } else if (node.fileAbsolutePath.indexOf('pages/page') > -1) {
+      template = path.resolve(`src/templates/page.tsx`)
+    } else if (node.fileAbsolutePath.indexOf('pages/jobs') > -1) {
+      template = path.resolve(`src/templates/jobs.tsx`)
+    }
 
-      createPage({
-        path: `/${trimLeft(node.frontmatter.path, '/')}`,
-        component: template,
-        context: {} // additional data can be passed via context
-      })
+    createPage({
+      path: `/${trimLeft(node.frontmatter.path, '/')}`,
+      component: template,
+      context: {} // additional data can be passed via context
     })
+  })
 }
 
 const remoteFileType = 'RemoteFile'
@@ -59,8 +63,11 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(typeDefs)
 }
 
-
-exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => {
+exports.sourceNodes = async ({
+  actions,
+  createNodeId,
+  createContentDigest
+}) => {
   const { createNode } = actions
 
   const urls = [
@@ -77,26 +84,36 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
     'https://github.com/ory/kratos-selfservice-ui-react-native/blob/master/src/helpers/sdk.tsx'
   ]
 
-  await Promise.all(urls.map((url) => fetch(
-    url.replace('github.com', 'raw.githubusercontent.com')
-      .replace('/blob/', '/'))))
-    .then(res => Promise.all(res.map(r => r.text())))
-    .then(res => Promise.all(res.map((file, key) => {
-      const url = urls[key]
-      return createNode({
-        id: createNodeId(`${remoteFileType}-${url}`),
-        parent: null,
-        children: [],
-        content: file,
-        url: url,
-        internal: {
-          type: remoteFileType,
-          mediaType: `text/text`,
-          contentDigest: createContentDigest(file)
-        }
-      })
-    })))
-    .catch(err => {
+  await Promise.all(
+    urls.map((url) =>
+      fetch(
+        url
+          .replace('github.com', 'raw.githubusercontent.com')
+          .replace('/blob/', '/')
+      )
+    )
+  )
+    .then((res) => Promise.all(res.map((r) => r.text())))
+    .then((res) =>
+      Promise.all(
+        res.map((file, key) => {
+          const url = urls[key]
+          return createNode({
+            id: createNodeId(`${remoteFileType}-${url}`),
+            parent: null,
+            children: [],
+            content: file,
+            url: url,
+            internal: {
+              type: remoteFileType,
+              mediaType: `text/text`,
+              contentDigest: createContentDigest(file)
+            }
+          })
+        })
+      )
+    )
+    .catch((err) => {
       console.error(err)
       return Promise.resolve()
     })

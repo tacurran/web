@@ -14,16 +14,16 @@ const getTimeValueInSeconds = (timeValue) => {
 
 const getYoutubeID = (urlString) => {
   const url = new URL(urlString)
-  return url.host === 'youtu.be' ? url.pathname.slice(1) : url.searchParams.get('v')
+  return url.host === 'youtu.be'
+    ? url.pathname.slice(1)
+    : url.searchParams.get('v')
 }
 
 const getYouTubeIFrameSrc = (urlString) => {
   const url = new URL(urlString)
   const id = getYoutubeID(urlString)
 
-  const embedUrl = new URL(
-    `https://www.youtube-nocookie.com/embed/${id}?rel=0`
-  )
+  const embedUrl = new URL(`https://www.youtube-nocookie.com/embed/${id}?rel=0`)
 
   url.searchParams.forEach((value, name) => {
     if (name === 'v') {
@@ -70,6 +70,13 @@ module.exports = {
         path: `${__dirname}/src/pages/blog`
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `jobs`,
+        path: `${__dirname}/src/pages/jobs`
+      }
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-plugin-react-svg',
@@ -85,10 +92,11 @@ module.exports = {
         extensions: [`.md`, `.mdx`],
         remarkPlugins: [
           [
-            require(`remark-admonitions`), {
-            tag: ':::',
-            icons: 'svg'
-          }
+            require(`remark-admonitions`),
+            {
+              tag: ':::',
+              icons: 'svg'
+            }
           ]
         ],
         gatsbyRemarkPlugins: [
@@ -160,7 +168,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {
         siteUrl: `https://www.ory.sh`
-      },
+      }
     },
     {
       resolve: `gatsby-plugin-postcss`,
@@ -177,7 +185,8 @@ module.exports = {
                   {
                     customMedia: {
                       '--sm-viewport': '(max-width: 375px)',
-                      '--md-viewport': '(max-width: 768px) and (min-width: 375px)',
+                      '--md-viewport':
+                        '(max-width: 768px) and (min-width: 375px)',
                       '--lg-viewport': '(min-width: 769px)',
                       '--mobile-viewport': '(max-width: 768px)',
                       '--xs': '(min-width: 0px) and (max-width: 599px)', // small phone
