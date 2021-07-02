@@ -22,8 +22,10 @@ const BlogHero = ({ title, date, author, overline, subtitle }: PropTypes) => (
       <Grid lg={7} md={10} sm={12} xs={12}>
         <ContentText>
           <Molecule>
-            {overline &&  (
-              <h3 className={cn('font-overline', 'primary', pb16)}>{overline}</h3>
+            {overline && (
+              <h3 className={cn('font-overline', 'primary', pb16)}>
+                {overline}
+              </h3>
             )}
             <h2 className={cn('font-h3', pb32)}>{title}</h2>
             {subtitle && (
