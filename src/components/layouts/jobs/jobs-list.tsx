@@ -11,6 +11,7 @@ type Edge = {
       title: string
       path: string
       description: string
+      position: string
       location: string
     }
   }
@@ -32,6 +33,7 @@ const JobsList = () => {
               title
               path
               description
+              position
               location
             }
           }
@@ -52,7 +54,10 @@ const JobsList = () => {
             )}
           >
             {posts.map(
-              ({ id, frontmatter: { title, path, description, location } }) => (
+              ({
+                id,
+                frontmatter: { title, path, description, location, position }
+              }) => (
                 <Button
                   style={'none'}
                   key={id}
@@ -64,7 +69,7 @@ const JobsList = () => {
                     {description}
                   </p>
                   <p className={cn('col-lg-offset-1 col-lg-10', 'secondary')}>
-                    {location}
+                    {position} - {location}
                   </p>
                 </Button>
               )
