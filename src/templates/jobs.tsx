@@ -4,7 +4,7 @@ import Layout from '../components/layouts/layout/layout'
 import SEO from '../components/layouts/seo/seo'
 import BlogSection from '../components/blog-section'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import BlogHero from '../components/blog-hero'
+import JobsHero from '../components/layouts/jobs/jobs-hero'
 
 export default function PageTemplate(props: any) {
   const { mdx } = props.data // data.mdx holds our post data
@@ -16,13 +16,12 @@ export default function PageTemplate(props: any) {
         description={fn.seo?.description || fn.description}
         title={fn.seo?.title || fn.title}
         keywords={fn.seo?.keywords || ''}
-        canonical={fn.seo?.canonical}
       />
-      <BlogHero
+      <JobsHero
         title={fn.title}
-        author={fn.location}
-        subtitle={fn.description}
-        date={fn.lastUpdatedAt && `Last updated at ${fn.lastUpdatedAt}`}
+        description={fn.description}
+        location={fn.location}
+        position={fn.position}
       />
       <BlogSection alt={false}>
         <MDXRenderer>{body}</MDXRenderer>
@@ -39,14 +38,13 @@ export const pageQuery = graphql`
         path
         title
         description
+        position
         location
         seo {
           title
           description
           keywords
-          canonical
         }
-        lastUpdatedAt
       }
     }
   }
