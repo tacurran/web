@@ -2,21 +2,13 @@ import React from 'react'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
-import Stats from '../components/layouts/stats/stats'
 import Quotes from '../components/layouts/quotes/quotes'
 import SEO from '../components/layouts/seo/seo'
-import Projects from '../components/layouts/projects/projects'
 import { quotesDefault } from '../components/layouts/quotes/quotes-content'
-import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
-import Adopters from '../components/layouts/adopters/adopters'
 import Button from '../components/freestanding/button/button'
-import codeboxIllustration from '../images/illustrations/codebox.svg'
-import Coding from '../components/layouts/coding/coding'
 import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 import Hero from '../components/layouts/hero/hero'
 import heroIllustration from '../images/illustrations/hero.svg'
-import FeatureImage from '../components/layouts/feature-image/feature-image'
-import dashboardIllustration from '../images/illustrations/dashboard.svg'
 import Features from '../components/layouts/features/features'
 import { featuresDefault } from '../components/layouts/features/features-content'
 import JobsList from '../components/layouts/jobs/jobs-list'
@@ -81,7 +73,6 @@ const IndexPage = () => {
         }
         title={'Ory - Open Source Auth Solutions For Everyone'}
       />
-
       <Hero
         title={'Open Source Identity Platform For Everyone'}
         description={
@@ -107,7 +98,26 @@ const IndexPage = () => {
           />
         }
       />
-      <JobsList />
+      <JobsList
+        title={'Open Positions'}
+        description={
+          <>
+            We are constantly looking for fresh ideas and foo text Lorem Ipsum
+            is simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has{' '}
+            <Button to={'#'} style={'link-inline'}>
+              Work with us!
+            </Button>{' '}
+            been the industry's standard dummy text ever since the 1500s, when
+            an unknown printer took a galley of type and scrambled it
+          </>
+        }
+        buttons={
+          <Button to={'mailto:jobs@ory.sh'} style={'filled'}>
+            Work with us
+          </Button>
+        }
+      />
       <Features {...featuresDefault} />
       <Quotes {...quotesDefault} />
       <Quickstart {...quickstartOpenSource} />
