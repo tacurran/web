@@ -17,12 +17,6 @@ export default function PageTemplate(props: any) {
         title={fn.seo?.title || fn.title}
         keywords={fn.seo?.keywords || ''}
       />
-      <JobsHero
-        title={fn.title}
-        description={fn.description}
-        location={fn.location}
-        position={fn.position}
-      />
       <BlogSection alt={false}>
         <MDXRenderer>{body}</MDXRenderer>
       </BlogSection>
