@@ -190,7 +190,7 @@ const Layout = ({ children }: PropTypes) => {
                 Pricing
               </Button>
             )
-          },          
+          },
           {
             title: (
               <Button to={'/docs'} style={'none'}>
@@ -198,7 +198,6 @@ const Layout = ({ children }: PropTypes) => {
               </Button>
             )
           },
-
           {
             title: 'Company',
             mainMenu: [

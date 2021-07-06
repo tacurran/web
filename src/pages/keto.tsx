@@ -1,6 +1,8 @@
 import React from 'react'
 import Button from '../components/freestanding/button/button'
 import Adopters from '../components/layouts/adopters/adopters'
+import FeatureList from '../components/layouts/featurelist/feature-list'
+import { featureListKeto } from '../components/layouts/featurelist/feature-list-content'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
 import Newsletter from '../components/newsletter'
 import Hero from '../components/layouts/hero/hero'
@@ -96,9 +98,10 @@ const IndexPage = () => {
   const ArrowRight = (
     <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
   )
-  const CheckCircle = (
+  const CheckCircleHero = (
     <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
   )
+
   return (
     <Layout>
       <SEO
@@ -116,7 +119,7 @@ const IndexPage = () => {
           <Button
             to={'/keto/docs/quickstart/'}
             style={'filled'}
-            iconRight={CheckCircle}
+            iconRight={CheckCircleHero}
           >
             Get Started
           </Button>
@@ -132,6 +135,8 @@ const IndexPage = () => {
       />
 
       <Newsletter preselect="keto" />
+
+      <FeatureList {...featureListKeto} />
 
       <FeatureImage
         overline={'Start in minutes'}

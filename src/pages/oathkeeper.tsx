@@ -1,6 +1,8 @@
 import React from 'react'
 import Button from '../components/freestanding/button/button'
 import Adopters from '../components/layouts/adopters/adopters'
+import FeatureList from '../components/layouts/featurelist/feature-list'
+import { featureListOathkeeper } from '../components/layouts/featurelist/feature-list-content'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
 import Newsletter from '../components/newsletter'
 import Hero from '../components/layouts/hero/hero'
@@ -66,7 +68,7 @@ const IndexPage = () => {
   const ArrowRight = (
     <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
   )
-  const CheckCircle = (
+  const CheckCircleHero = (
     <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
   )
   return (
@@ -87,7 +89,7 @@ const IndexPage = () => {
           <Button
             to={'/oathkeeper/docs/configure-deploy/'}
             style={'filled'}
-            iconRight={CheckCircle}
+            iconRight={CheckCircleHero}
           >
             Get Started
           </Button>
@@ -103,6 +105,8 @@ const IndexPage = () => {
       />
 
       <Newsletter preselect="oathkeeper" />
+
+      <FeatureList {...featureListOathkeeper} />
 
       <FeatureImage
         overline={'Start in minutes'}

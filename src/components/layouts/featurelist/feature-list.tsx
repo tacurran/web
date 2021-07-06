@@ -9,17 +9,18 @@ import {
 } from '../../freestanding/utils/padding.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
-import FeatureListContent, { Features } from './content/feature-list-content'
+import FeatureListItem, { Features } from './feature-list-item'
 import ContentText from '../../freestanding/content/content-text'
 import Molecule from '../../freestanding/molecule/molecule'
 import Grid from '../../freestanding/containers/grid'
 import MoleculeIconWrapper from '../../freestanding/molecule/molecule-icon-wrapper'
+import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 
 interface FeatureSection {
   icon: React.ReactElement
   title: string
-  description: string
-  button: React.ReactElement
+  description: React.ReactElement
+  button?: React.ReactElement
   features: Array<Features>
 }
 
@@ -47,10 +48,13 @@ const FeatureList = ({ className, features }: PropTypes) => (
                     {section.description}
                   </p>
                 </Molecule>
+                {section.button && (
+                  <MoleculeInteraction>{section.button}</MoleculeInteraction>
+                )}
               </ContentText>
             </Grid>
             <Grid lg={6} md={8} sm={12} xs={12}>
-              <FeatureListContent features={section.features} />
+              <FeatureListItem features={section.features} />
             </Grid>
           </Container>
         )

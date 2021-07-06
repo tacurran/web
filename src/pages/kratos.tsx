@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../components/freestanding/button/button'
 import Adopters from '../components/layouts/adopters/adopters'
+import FeatureList from '../components/layouts/featurelist/feature-list'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
 import Newsletter from '../components/newsletter'
 import Hero from '../components/layouts/hero/hero'
@@ -14,6 +15,7 @@ import { adoptersDefault } from '../components/layouts/adopters/adopters-content
 import Stats from '../components/layouts/stats/stats'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
 import IconWrapper from '../components/freestanding/icon/icon-wrapper'
+import { featureListKratos } from '../components/layouts/featurelist/feature-list-content'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -66,7 +68,7 @@ const IndexPage = () => {
   const ArrowRight = (
     <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
   )
-  const CheckCircle = (
+  const CheckCircleHero = (
     <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
   )
   return (
@@ -84,7 +86,7 @@ const IndexPage = () => {
           <Button
             to={'/kratos/docs/quickstart'}
             style={'filled'}
-            iconRight={CheckCircle}
+            iconRight={CheckCircleHero}
           >
             Get Started
           </Button>
@@ -100,6 +102,8 @@ const IndexPage = () => {
       />
 
       <Newsletter preselect="kratos" />
+
+      <FeatureList {...featureListKratos} />
 
       <FeatureImage
         overline={'Start in minutes'}

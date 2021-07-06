@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../components/freestanding/button/button'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
 import Newsletter from '../components/newsletter'
+import FeatureList from '../components/layouts/featurelist/feature-list'
 import Hero from '../components/layouts/hero/hero'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
@@ -15,6 +16,7 @@ import Adopters from '../components/layouts/adopters/adopters'
 import Stats from '../components/layouts/stats/stats'
 import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 import YoutubeEmbed from '../components/layouts/embed/embed'
+import { featureListHydra } from '../components/layouts/featurelist/feature-list-content'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -56,7 +58,7 @@ const IndexPage = () => {
   const ArrowRight = (
     <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
   )
-  const CheckCircle = (
+  const CheckCircleHero = (
     <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
   )
 
@@ -80,7 +82,7 @@ const IndexPage = () => {
           <Button
             to={'/hydra/docs/5min-tutorial/'}
             style={'filled'}
-            iconRight={CheckCircle}
+            iconRight={CheckCircleHero}
           >
             Get Started
           </Button>
@@ -117,10 +119,10 @@ const IndexPage = () => {
             </Button>
           </>
         }
-        image={
-          <YoutubeEmbed embedId="xcOjpLjy_rY?modestbranding=1&autohide=1&showinfo=0&controls=0" />
-        }
+        image={<YoutubeEmbed embedId="xcOjpLjy_rY" />}
       />
+
+      <FeatureList {...featureListHydra} />
 
       <FeatureImage
         mirror={true}
