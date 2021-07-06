@@ -1,6 +1,9 @@
 declare const styles: {
-  readonly blogSummary: string
-  readonly blogRow: string
-  readonly blogBox: string
+  readonly jobList: string
+  readonly jobs: string
+  readonly jobItem: string
+  readonly jobTitle: string
+  readonly jobDetails: string
+  readonly jobDescription: string
 }
 export = styles
