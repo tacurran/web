@@ -19,7 +19,7 @@ export interface Text {
 }
 
 interface PropTypes {
-  title: string
+  title?: string
   description: React.ReactElement
   textbox: Array<Text>
 }

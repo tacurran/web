@@ -1,11 +1,10 @@
 import React from 'react'
 import Layout from '../components/layouts/layout/layout'
-import Quickstart from '../components/layouts/quickstart/quickstart'
-import { quickstartJobs } from '../components/layouts/quickstart/quickstart-content'
 import SEO from '../components/layouts/seo/seo'
 import Button from '../components/freestanding/button/button'
 import HeroFeatures from '../components/layouts/hero/hero-features'
 import { heroFeaturesJobsBenefits } from '../components/layouts/hero/hero-features-content'
+import { heroFeaturesJobsValues } from '../components/layouts/hero/hero-features-content'
 import JobsList from '../components/layouts/jobs/jobs-list'
 
 const IndexPage = () => {
@@ -34,7 +33,7 @@ const IndexPage = () => {
           </Button>
         }
       />
-      <Quickstart {...quickstartJobs} />
+      <HeroFeatures {...heroFeaturesJobsValues} />
     </Layout>
   )
 }

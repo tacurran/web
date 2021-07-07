@@ -78,3 +78,57 @@ export const heroFeaturesJobsBenefits = {
     }
   ]
 }
+
+export const heroFeaturesJobsValues = {
+  description: <>Our Core Values</>,
+  textbox: [
+    {
+      icon: Code,
+      title: <>Commitment</>,
+      description: (
+        <>
+          We are a company that believes in building great products. We take
+          pride in breaking boundaries, constantly improving, and aiming to
+          produce great work in order to win the market. Our mission is
+          excellence.
+        </>
+      )
+    },
+    {
+      icon: UserPlus,
+      title: <>Respect</>,
+      description: (
+        <>
+          We are a small, passionate team that thrives on creating and
+          delivering meaningful work. We treat everyone with whom we work with
+          respect, regardless of position. We work hard to understand the
+          details, but we approach problems with humility and a beginner’s state
+          of mind.
+        </>
+      )
+    },
+    {
+      icon: CirclesThreePlus,
+      title: <>Balance</>,
+      description: (
+        <>
+          We believe that maintaining a healthy balance enables high
+          performance. Whether you find it through a healthy lifestyle, time
+          with friends and family, or intellectual pursuits, a wholesome
+          work-life balance is key to producing expectional work.
+        </>
+      )
+    },
+    {
+      icon: LockOpen,
+      title: <>Honesty</>,
+      description: (
+        <>
+          We can contribute most effectively when we communicate openly and
+          honestly - learning both from our successes and our failures. Openness
+          and sincerity are the heart and soul of Ory.
+        </>
+      )
+    }
+  ]
+}
