@@ -79,7 +79,6 @@ export const textboxesDefault = {
   ]
 }
 
-
 export const textboxesJobsBenefits = {
   overline: 'Free Real Estate',
   title: <>Benefits of working at Ory</>,
