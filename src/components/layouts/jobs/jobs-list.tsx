@@ -39,12 +39,16 @@ type Edge = {
   }
 }
 
-const RocketLaunch = () => (
-  <IconWrapper color={'base-white'} icon={'RocketLaunch'} size={'16'} />
+const MapPinLine = () => (
+  <IconWrapper color={'base-white'} icon={'MapPinLineDuotone'} size={'16'} />
 )
 
-const BookOpen = () => (
-  <IconWrapper color={'base-white'} icon={'BookOpenDuotone'} size={'24'} />
+const ClockClockwise = () => (
+  <IconWrapper
+    color={'base-white'}
+    icon={'ClockClockwiseDuotone'}
+    size={'16'}
+  />
 )
 
 const JobsList = ({ title, description, buttons }: PropTypes) => {
@@ -105,15 +109,15 @@ const JobsList = ({ title, description, buttons }: PropTypes) => {
                   {node.frontmatter.description}
                 </p>
                 <div className={cn(styles.jobDetails)}>
-                  <RocketLaunch />
+                  <MapPinLine />
                   <p className={cn('font-p-sm', pl8)}>
                     <b>{node.frontmatter.location}</b>
                   </p>
                 </div>
                 <div className={cn(styles.jobDetails)}>
-                  <RocketLaunch />
+                  <ClockClockwise />
                   <p className={cn('font-p-sm', pl8)}>
-                    <b>{node.frontmatter.position}</b>
+                    {node.frontmatter.position}
                   </p>
                 </div>
               </Button>
