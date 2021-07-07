@@ -40,12 +40,16 @@ type Edge = {
 }
 
 const MapPinLine = () => (
-  <IconWrapper color={'base-white'} icon={'MapPinLineDuotone'} size={'16'} />
+  <IconWrapper
+    color={'themed-primary'}
+    icon={'MapPinLineDuotone'}
+    size={'16'}
+  />
 )
 
 const ClockClockwise = () => (
   <IconWrapper
-    color={'base-white'}
+    color={'themed-primary'}
     icon={'ClockClockwiseDuotone'}
     size={'16'}
   />
@@ -97,29 +101,34 @@ const JobsList = ({ title, description, buttons }: PropTypes) => {
           >
             {(data.allMdx.edges as Edge[]).map(({ node }) => (
               <Button
-                style={'filled'}
+                style={'outlined'}
                 to={node.frontmatter.path}
                 className={cn(styles.jobItem)}
                 key={node.id}
               >
-                <h3 className={cn(styles.jobTitle, 'font-h5', pb8)}>
-                  {node.frontmatter.title}
-                </h3>
-                <p className={cn(styles.jobDescription, 'font-p-sm', pb16)}>
-                  {node.frontmatter.description}
+                <div className={cn(styles.jobInfo, pb16)}>
+                  <h3 className={cn(styles.jobTitle, 'font-h5', pb8)}>
+                    {node.frontmatter.title}
+                  </h3>
+
+                  <div className={cn(styles.jobDetails)}>
+                    <MapPinLine />
+                    <p className={cn('font-p-xs', pl8)}>
+                      <b>{node.frontmatter.location}</b>
+                    </p>
+                  </div>
+                  <div className={cn(styles.jobDetails)}>
+                    <ClockClockwise />
+                    <p className={cn('font-p-xs', pl8)}>
+                      {node.frontmatter.position}
+                    </p>
+                  </div>
+                </div>
+                <p
+                  className={cn(styles.jobDescription, 'font-p-sm', 'mute-85')}
+                >
+                  {node.frontmatter.description} <b>Learn more</b>
                 </p>
-                <div className={cn(styles.jobDetails)}>
-                  <MapPinLine />
-                  <p className={cn('font-p-sm', pl8)}>
-                    <b>{node.frontmatter.location}</b>
-                  </p>
-                </div>
-                <div className={cn(styles.jobDetails)}>
-                  <ClockClockwise />
-                  <p className={cn('font-p-sm', pl8)}>
-                    {node.frontmatter.position}
-                  </p>
-                </div>
               </Button>
             ))}
           </Container>

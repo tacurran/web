@@ -3,51 +3,40 @@
   padding-bottom: 6rem;
 }
 
-.jobs {
-  display: flex;
-}
-
 .job-item {
+  background: var(--colors-themed-background--next);
+  color: var(--colors-base-grey--next);
   border-radius: unset;
   display: flex;
   justify-content: flex-start;
   padding: 32px;
-  flex: 0 calc(50% - calc(32px + (32px * 2))); /*half minus margin and padding*/
-  margin-right: 32px;
+  flex: 0 100%;
   margin-bottom: 2rem;
-
-  &:nth-child(even) {
-    margin-right: unset;
-  }
 
   &:last-child {
     margin-bottom: unset;
   }
 }
 
-@media (--mobile-viewport) {
-  .job-item {
-    flex: 0 100%;
-    margin-right: 0;
-
-    &:nth-child(even) {
-      margin-right: initial;
-    }
+.job-info {
+  flex: 0 100%;
   }
-}
 
 .job-title {
+  flex: 0 100%;
+}
+.job-details {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
   flex: 0 100%;
 }
 
 .job-description {
   flex: 0 100%;
+  color: var(--colors-base-grey--next);
 }
 
-.job-details {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex: 0 100%;
-}
+
 
