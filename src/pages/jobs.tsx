@@ -12,6 +12,8 @@ import heroIllustration from '../images/illustrations/hero.svg'
 import Textboxes from '../components/layouts/textboxes/textboxes'
 import { textboxesJobsBenefits } from '../components/layouts/textboxes/textboxes-content'
 import JobsList from '../components/layouts/jobs/jobs-list'
+import Grid from '../components/freestanding/containers/grid'
+import Container from '../components/freestanding/containers/container'
 
 const IndexPage = () => {
   const RocketLaunch = (
@@ -73,31 +75,7 @@ const IndexPage = () => {
         }
         title={'Ory - Open Source Auth Solutions For Everyone'}
       />
-      <Hero
-        title={'Open Source Identity Platform For Everyone'}
-        description={
-          'Secure cloud applications and authenticate, authorize and manage users. Ory is built on open standards and secures billions of requests in production every month.'
-        }
-        buttons={
-          <Button
-            to={'https://console.ory.sh/registration'}
-            style={'filled'}
-            iconRight={RocketLaunch}
-          >
-            Request Access
-          </Button>
-        }
-        image={
-          <img
-            width={'100%'}
-            height={'100%'}
-            loading="lazy"
-            className="responsive"
-            alt="Overview of the Ory Console"
-            src={heroIllustration}
-          />
-        }
-      />
+      <Textboxes {...textboxesJobsBenefits} />
       <JobsList
         title={'Open Positions'}
         description={
@@ -113,8 +91,6 @@ const IndexPage = () => {
           </Button>
         }
       />
-      <Textboxes {...textboxesJobsBenefits} />
-      <Quotes {...quotesDefault} />
       <Quickstart {...quickstartOpenSource} />
     </Layout>
   )
