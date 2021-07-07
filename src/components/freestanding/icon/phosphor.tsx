@@ -55,6 +55,12 @@ import ShieldWarning from '../../../images/phosphor/shield-warning.svg'
 import ShieldWarningDuotone from '../../../images/phosphor/shield-warning-duotone.svg'
 import Key from '../../../images/phosphor/key.svg'
 import KeyDuotone from '../../../images/phosphor/key-duotone.svg'
+import PaperPlaneTilt from '../../../images/phosphor/paper-plane-tilt.svg'
+import PaperPlaneTiltDuotone from '../../../images/phosphor/paper-plane-tilt-duotone.svg'
+import ClockClockwise from '../../../images/phosphor/clock-clockwise.svg'
+import ClockClockwiseDuotone from '../../../images/phosphor/clock-clockwise-duotone.svg'
+import MapPinLine from '../../../images/phosphor/map-pin-line.svg'
+import MapPinLineDuotone from '../../../images/phosphor/map-pin-line-duotone.svg'
 
 export {
   GithubLogo,
@@ -113,7 +119,13 @@ export {
   ShieldWarning,
   ShieldWarningDuotone,
   KeyDuotone,
-  Key
+  Key,
+  PaperPlaneTilt,
+  PaperPlaneTiltDuotone,
+  ClockClockwise,
+  ClockClockwiseDuotone,
+  MapPinLine,
+  MapPinLineDuotone
 }
 type IconName =
   | 'GithubLogo'
@@ -149,6 +161,9 @@ type IconName =
   | 'UserGear'
   | 'ShieldWarning'
   | 'Key'
+  | 'PaperPlane'
+  | 'ClockClockwise'
+  | 'MapPinLine'
 
 type IconType = 'Duotone' | 'Bold'
 
