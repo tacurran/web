@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
-import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
+import { quickstartJobs } from '../components/layouts/quickstart/quickstart-content'
 import SEO from '../components/layouts/seo/seo'
 import Button from '../components/freestanding/button/button'
 import HeroFeatures from '../components/layouts/hero/hero-features'
@@ -11,15 +11,21 @@ import JobsList from '../components/layouts/jobs/jobs-list'
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO description={'#placeholder'} title={'#placeholder'} />
+      <SEO
+        description={
+          'Build scalable open source software at one of the fastest growing startups in the space of cloud identity'
+        }
+        title={'Ory Jobs - Join The Team! '}
+      />
       <HeroFeatures {...heroFeaturesJobsBenefits} />
       <JobsList
-        title={'Open Positions'}
+        title={''}
         description={
           <>
-            We provide developers with a secure, reliable, and scalable access
-            solution to their products by building open source libraries that
-            are a proven standard for AuthZ/AuthN.
+            Today, Ory powers organizations of all sizes — from single-person
+            startups to multinational enterprises - and we are only just getting
+            started. We’re looking for talented, creative people to build the
+            future of Ory with us.
           </>
         }
         buttons={
@@ -28,7 +34,7 @@ const IndexPage = () => {
           </Button>
         }
       />
-      <Quickstart {...quickstartOpenSource} />
+      <Quickstart {...quickstartJobs} />
     </Layout>
   )
 }
