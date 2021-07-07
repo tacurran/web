@@ -1,19 +1,15 @@
 import React from 'react'
-import { textboxes, textboxesContent } from './textboxes.module.css'
+import * as styles from './hero-features.module.css'
 import cn from 'classnames'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
-import Molecule from '../../freestanding/molecule/molecule'
 import {
-  pb16,
+  pb32,
   pb48,
   pb64,
-  pb8,
-  pt24,
-  pt32
+  pb8
 } from '../../freestanding/utils/padding.module.css'
-import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 
 export interface Text {
@@ -23,23 +19,27 @@ export interface Text {
 }
 
 interface PropTypes {
-  overline: string
-  title: React.ReactElement
-  description?: React.ReactElement
-  buttons?: React.ReactNode
+  title: string
+  description: React.ReactElement
   textbox: Array<Text>
 }
 
-const Textboxes = ({
-  overline,
-  title,
-  description,
-  buttons,
-  textbox
-}: PropTypes) => (
-  <div className={cn(textboxes)}>
-    <Container fluid={true} alignItems={'start'}>
+const HeroFeatures = ({ title, description, textbox }: PropTypes) => (
+  <div className={cn(styles.heroFeatures)}>
+    <Container fluid={true} justify={'center'} alignItems={'start'}>
       <Grid lg={12} md={12} sm={12} xs={12}>
+        <Container fluid={true} justify={'center'} className={cn(pb64)}>
+          <Grid
+            lg={6}
+            md={12}
+            sm={12}
+            xs={12}
+            className={cn(styles.heroFeaturesHeading)}
+          >
+            <h1 className={cn('font-h1', pb32)}>{title}</h1>
+            <p className={cn('font-p-lg', 'mute-85', pb8)}>{description}</p>
+          </Grid>
+        </Container>
         <Container alignItems={'start'} justify={'start'}>
           {textbox.map((f, index) => {
             return (
@@ -48,7 +48,7 @@ const Textboxes = ({
                 md={6}
                 sm={6}
                 xs={12}
-                className={cn(pb48, textboxesContent)}
+                className={cn(pb48, styles.heroFeaturesContent)}
                 key={index}
               >
                 <Container flexContainer={'row'} alignItems={'start'}>
@@ -71,4 +71,4 @@ const Textboxes = ({
   </div>
 )
 
-export default Textboxes
+export default HeroFeatures
