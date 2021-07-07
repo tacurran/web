@@ -10,7 +10,7 @@ import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 import Hero from '../components/layouts/hero/hero'
 import heroIllustration from '../images/illustrations/hero.svg'
 import Textboxes from '../components/layouts/textboxes/textboxes'
-import { featuresJobsBenefits } from '../components/layouts/textboxes/textboxes-content'
+import { textboxesJobsBenefits } from '../components/layouts/textboxes/textboxes-content'
 import JobsList from '../components/layouts/jobs/jobs-list'
 
 const IndexPage = () => {
@@ -113,7 +113,7 @@ const IndexPage = () => {
           </Button>
         }
       />
-      <Textboxes {...featuresJobsBenefits} />
+      <Textboxes {...textboxesJobsBenefits} />
       <Quotes {...quotesDefault} />
       <Quickstart {...quickstartOpenSource} />
     </Layout>
