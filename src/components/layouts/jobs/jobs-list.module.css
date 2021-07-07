@@ -21,7 +21,7 @@
 
 .job-info {
   flex: 0 100%;
-  }
+}
 
 .job-title {
   flex: 0 100%;
@@ -38,6 +38,3 @@
   flex: 0 100%;
   color: var(--colors-base-grey--next);
 }
-
-
-
