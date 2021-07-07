@@ -6,6 +6,7 @@
 .job-item {
   background: var(--colors-themed-background--next);
   color: var(--colors-base-grey--next);
+  border-color: transparent;
   border-radius: unset;
   display: flex;
   justify-content: flex-start;
