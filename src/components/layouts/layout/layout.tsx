@@ -231,7 +231,7 @@ const Layout = ({ children }: PropTypes) => {
                 description: '',
                 button: (
                   <Button
-                    to={'https://github.com/ory/jobs'}
+                    to={'/jobs'}
                     style={'link'}
                     openInNewWindow={false}
                     iconRight={arrowRight}
@@ -565,20 +565,20 @@ const Layout = ({ children }: PropTypes) => {
                 openInNewWindow={true}
               >
                 GitHub
-              </Button>
+              </Button>,
+              <Button
+              className={cn('font-p-sm')}
+              to={'/blog'}
+              style={'none'}
+              openInNewWindow={true}
+            >
+              Blog
+            </Button>,
             ]
           },
           {
             title: 'Company',
             links: [
-              <Button
-                className={cn('font-p-sm')}
-                to={'/blog'}
-                style={'none'}
-                openInNewWindow={true}
-              >
-                Blog
-              </Button>,
               <Button
                 className={cn('font-p-sm')}
                 to={'/about'}
@@ -589,7 +589,7 @@ const Layout = ({ children }: PropTypes) => {
               </Button>,
               <Button
                 className={cn('font-p-sm')}
-                to={'https://github.com/ory/jobs'}
+                to={'/jobs'}
                 style={'none'}
                 openInNewWindow={true}
               >
