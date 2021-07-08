@@ -5,6 +5,8 @@ import Button from '../components/freestanding/button/button'
 import HeroFeatures from '../components/layouts/hero/hero-features'
 import { heroFeaturesJobsBenefits } from '../components/layouts/hero/hero-features-content'
 import { heroFeaturesJobsValues } from '../components/layouts/hero/hero-features-content'
+import Quickstart from '../components/layouts/quickstart/quickstart'
+import { quickstartJobs } from '../components/layouts/quickstart/quickstart-content'
 import JobsList from '../components/layouts/jobs/jobs-list'
 
 const IndexPage = () => {
@@ -34,6 +36,8 @@ const IndexPage = () => {
         }
       />
       <HeroFeatures {...heroFeaturesJobsValues} />
+
+      <Quickstart {...quickstartJobs} />
     </Layout>
   )
 }

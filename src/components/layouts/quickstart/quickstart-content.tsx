@@ -149,3 +149,65 @@ export const quickstartOpenSource = {
     }
   ]
 }
+
+export const quickstartJobs = {
+  title: <>Be part of a global community</>,
+  description: (
+    <>
+      Explore the Ory ecosystem and the work we do in open source. Participate
+      in discussions and contribute directly to Ory on GitHub. We love hiring
+      open source contributors to work with us full timenpm .
+    </>
+  ),
+  buttons: (
+    <>
+      <Button
+        style={'filled'}
+        to={'/docs/ecosystem/community'}
+        iconLeft={BookOpen}
+      >
+        Community Overview
+      </Button>
+    </>
+  ),
+  content: [
+    {
+      icon: SlackLogo,
+      title: <>Developer Chat on Slack</>,
+      description: (
+        <>
+          A community to help you succeed. Become a hero for developers, ask
+          questions & participate in events.
+        </>
+      ),
+      button: (
+        <Button
+          to={'https://slack.ory.sh/'}
+          style={'link'}
+          iconRight={ArrowRight}
+        >
+          Join the chat
+        </Button>
+      )
+    },
+    {
+      icon: ChatsCircle,
+      title: <>GitHub Discussions</>,
+      description: (
+        <>
+          Make yourself heard on GitHub and contribute code and insights to the
+          open source projects at the heart of Ory.
+        </>
+      ),
+      button: (
+        <Button
+          to={'https://github.com/ory/'}
+          style={'link'}
+          iconRight={ArrowRight}
+        >
+          Explore our GitHub
+        </Button>
+      )
+    }
+  ]
+}
