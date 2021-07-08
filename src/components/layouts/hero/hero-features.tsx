@@ -19,12 +19,13 @@ export interface Text {
 }
 
 interface PropTypes {
-  title?: string
-  description: React.ReactElement
+  small?: boolean
+  title: string
+  description?: React.ReactElement
   textbox: Array<Text>
 }
 
-const HeroFeatures = ({ title, description, textbox }: PropTypes) => (
+const HeroFeatures = ({ small, title, description, textbox }: PropTypes) => (
   <div className={cn(styles.heroFeatures)}>
     <Container fluid={true} justify={'center'} alignItems={'start'}>
       <Grid lg={12} md={12} sm={12} xs={12}>
@@ -36,8 +37,14 @@ const HeroFeatures = ({ title, description, textbox }: PropTypes) => (
             xs={12}
             className={cn(styles.heroFeaturesHeading)}
           >
-            <h1 className={cn('font-h1', pb32)}>{title}</h1>
-            <p className={cn('font-p-lg', 'mute-85', pb8)}>{description}</p>
+            {!small ? (
+              <h1 className={cn('font-h1', pb32)}>{title}</h1>
+            ) : (
+              <h2 className={cn('font-h3', pb32)}>{title}</h2>
+            )}
+            {description && (
+              <p className={cn('font-p-lg', 'mute-85', pb8)}>{description}</p>
+            )}
           </Grid>
         </Container>
         <Container alignItems={'start'} justify={'start'}>

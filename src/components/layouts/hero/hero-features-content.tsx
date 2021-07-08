@@ -80,7 +80,8 @@ export const heroFeaturesJobsBenefits = {
 }
 
 export const heroFeaturesJobsValues = {
-  description: <>Our Core Values</>,
+  small: true,
+  title: 'Our Core Values',
   textbox: [
     {
       icon: Code,
