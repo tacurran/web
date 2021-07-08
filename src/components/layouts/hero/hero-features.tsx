@@ -13,7 +13,7 @@ import {
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 
 export interface Text {
-  icon: React.ReactElement
+  icon?: React.ReactElement
   title: React.ReactElement
   description: React.ReactElement
 }
@@ -59,9 +59,11 @@ const HeroFeatures = ({ small, title, description, textbox }: PropTypes) => (
                 key={index}
               >
                 <Container flexContainer={'row'} alignItems={'start'}>
-                  <ColourWrapper className={cn(pb8)} text={'themed-primary'}>
-                    {f.icon}
-                  </ColourWrapper>
+                  {f.icon && (
+                    <ColourWrapper className={cn(pb8)} text={'themed-primary'}>
+                      {f.icon}
+                    </ColourWrapper>
+                  )}
                   <ContentText>
                     <h4 className={cn('font-h5', pb8)}>{f.title}</h4>
                     <p className={cn('font-p-sm', 'mute-60', pb8)}>
