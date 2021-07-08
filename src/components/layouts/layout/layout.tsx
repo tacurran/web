@@ -567,13 +567,13 @@ const Layout = ({ children }: PropTypes) => {
                 GitHub
               </Button>,
               <Button
-              className={cn('font-p-sm')}
-              to={'/blog'}
-              style={'none'}
-              openInNewWindow={true}
-            >
-              Blog
-            </Button>,
+                className={cn('font-p-sm')}
+                to={'/blog'}
+                style={'none'}
+                openInNewWindow={true}
+              >
+                Blog
+              </Button>
             ]
           },
           {

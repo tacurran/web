@@ -84,14 +84,31 @@ export const heroFeaturesJobsValues = {
   title: 'Our Core Values',
   textbox: [
     {
+      icon: CirclesThreePlus,
+      title: <>Innovation</>,
+      description: (
+        <>
+          Building an enterprise-grade, globally scalable, secure infrastructure
+          around Identity Management means thinking out-of-the-box. We need to
+          embrace leading-edge technology, new ways of thinking, and redefining
+          business processes to innovate the market on how to solve some of its
+          most fundamental challenges. Ory's aim is no less than to lead the
+          market in state-of-the-art solutions for future proof Identity
+          Management. Innovation is part of our DNA.
+        </>
+      )
+    },
+    {
       icon: Code,
       title: <>Commitment</>,
       description: (
         <>
-          We are a company that believes in building great products. We take
-          pride in breaking boundaries, constantly improving, and aiming to
-          produce great work in order to win the market. Our mission is
-          excellence.
+          At Ory, we truly believe in building great products. Products, that
+          matter. Products, that are relevant for our customers. Products, that
+          help customers scale their business without limits. We take pride in
+          breaking boundaries, constantly improving, and aiming to produce great
+          work in order to win the market. Creating value for our customers
+          comes first. Our mission is excellence.
         </>
       )
     },
@@ -100,23 +117,12 @@ export const heroFeaturesJobsValues = {
       title: <>Respect</>,
       description: (
         <>
-          We are a small, passionate team that thrives on creating and
-          delivering meaningful work. We treat everyone with whom we work with
-          respect, regardless of position. We work hard to understand the
-          details, but we approach problems with humility and a beginner’s state
-          of mind.
-        </>
-      )
-    },
-    {
-      icon: CirclesThreePlus,
-      title: <>Balance</>,
-      description: (
-        <>
-          We believe that maintaining a healthy balance enables high
-          performance. Whether you find it through a healthy lifestyle, time
-          with friends and family, or intellectual pursuits, a wholesome
-          work-life balance is key to producing expectional work.
+          We are passionate about creating and delivering meaningful work. This
+          is only possible as a team: Ory as a company, Ory together with our
+          customers, and Ory as part of a larger community. Giving back to the
+          community we serve also means being committed to work hard to take on
+         challenges, approaching problems with humility – and a deep respect for diversity in business, culture, and
+          society. Together we build the products that can serve a purpose.
         </>
       )
     },
@@ -126,7 +132,9 @@ export const heroFeaturesJobsValues = {
       description: (
         <>
           We can contribute most effectively when we communicate openly and
-          honestly - learning both from our successes and our failures. Openness
+          honestly - learning both from our successes and our failures.
+          Listening to our customers and or employees. Continuously learning,
+          adapting, and growing our business on a healthy foundation. Openness
           and sincerity are the heart and soul of Ory.
         </>
       )

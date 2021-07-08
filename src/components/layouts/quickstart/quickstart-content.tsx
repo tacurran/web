@@ -143,7 +143,7 @@ export const quickstartOpenSource = {
           style={'link'}
           iconRight={ArrowRight}
         >
-          Explore our GitHub
+          Explore our codebase
         </Button>
       )
     }
@@ -205,7 +205,7 @@ export const quickstartJobs = {
           style={'link'}
           iconRight={ArrowRight}
         >
-          Explore our GitHub
+          Explore our codebase
         </Button>
       )
     }
