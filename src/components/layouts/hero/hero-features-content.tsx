@@ -21,7 +21,11 @@ const GitPR = (
   <IconWrapper color={'themed-primary'} icon={'GitPRDuotone'} size={'32'} />
 )
 const RocketLaunch = (
-  <IconWrapper color={'themed-primary'} icon={'RocketLaunchDuotone'} size={'32'} />
+  <IconWrapper
+    color={'themed-primary'}
+    icon={'RocketLaunchDuotone'}
+    size={'32'}
+  />
 )
 
 export const heroFeaturesJobsBenefits = {
@@ -124,8 +128,9 @@ export const heroFeaturesJobsValues = {
           is only possible as a team: Ory as a company, Ory together with our
           customers, and Ory as part of a larger community. Giving back to the
           community we serve also means being committed to work hard to take on
-         challenges, approaching problems with humility – and a deep respect for diversity in business, culture, and
-          society. Together we build the products that can serve a purpose.
+          challenges, approaching problems with humility – and a deep respect
+          for diversity in business, culture, and society. Together we build the
+          products that can serve a purpose.
         </>
       )
     },
