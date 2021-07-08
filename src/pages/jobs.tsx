@@ -18,9 +18,11 @@ const IndexPage = () => {
         }
         title={'Ory Jobs - Join The Team! '}
       />
+
       <HeroFeatures {...heroFeaturesJobsBenefits} />
+
       <JobsList
-        title={''}
+        title={'Open positions'}
         description={
           <>
             Today, Ory powers organizations of all sizes — from single-person
@@ -36,7 +38,6 @@ const IndexPage = () => {
         }
       />
       <HeroFeatures {...heroFeaturesJobsValues} />
-
       <Quickstart {...quickstartJobs} />
     </Layout>
   )
