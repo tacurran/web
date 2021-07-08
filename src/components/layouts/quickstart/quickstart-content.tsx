@@ -38,7 +38,7 @@ export const quickstartDefault = {
       <Button
         style={'filled'}
         to={'https://console.ory.sh/registration'}
-        iconLeft={RocketLaunch}
+        iconRight={RocketLaunch}
       >
         Request Access
       </Button>
@@ -102,7 +102,7 @@ export const quickstartOpenSource = {
       <Button
         style={'filled'}
         to={'/docs/ecosystem/projects'}
-        iconLeft={BookOpen}
+        iconRight={BookOpen}
       >
         Documentation
       </Button>
@@ -156,7 +156,7 @@ export const quickstartJobs = {
     <>
       Explore the Ory ecosystem and the work we do in open source. Participate
       in discussions and contribute directly to Ory on GitHub. We love hiring
-      open source contributors to work with us full timenpm .
+      open source contributors to work with us full time.
     </>
   ),
   buttons: (
@@ -164,7 +164,7 @@ export const quickstartJobs = {
       <Button
         style={'filled'}
         to={'/docs/ecosystem/community'}
-        iconLeft={BookOpen}
+        iconRight={BookOpen}
       >
         Community Overview
       </Button>
