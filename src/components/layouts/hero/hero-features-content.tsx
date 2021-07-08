@@ -17,6 +17,12 @@ const CirclesThreePlus = (
     size={'32'}
   />
 )
+const GitPR = (
+  <IconWrapper color={'themed-primary'} icon={'GitPRDuotone'} size={'32'} />
+)
+const RocketLaunch = (
+  <IconWrapper color={'themed-primary'} icon={'RocketLaunchDuotone'} size={'32'} />
+)
 
 export const heroFeaturesJobsBenefits = {
   title: 'Work with us to transform',
@@ -41,7 +47,7 @@ export const heroFeaturesJobsBenefits = {
       )
     },
     {
-      icon: UserPlus,
+      icon: GitPR,
       title: <>Freedom To Build</>,
       description: (
         <>
@@ -65,7 +71,7 @@ export const heroFeaturesJobsBenefits = {
       )
     },
     {
-      icon: LockOpen,
+      icon: RocketLaunch,
       title: <>Play A Vital Role</>,
       description: (
         <>
@@ -84,7 +90,6 @@ export const heroFeaturesJobsValues = {
   title: 'Our Core Values',
   textbox: [
     {
-      icon: CirclesThreePlus,
       title: <>Innovation</>,
       description: (
         <>
@@ -99,7 +104,6 @@ export const heroFeaturesJobsValues = {
       )
     },
     {
-      icon: Code,
       title: <>Commitment</>,
       description: (
         <>
@@ -113,7 +117,6 @@ export const heroFeaturesJobsValues = {
       )
     },
     {
-      icon: UserPlus,
       title: <>Respect</>,
       description: (
         <>
@@ -127,7 +130,6 @@ export const heroFeaturesJobsValues = {
       )
     },
     {
-      icon: LockOpen,
       title: <>Honesty</>,
       description: (
         <>

@@ -31,6 +31,7 @@ import Minus from '../../../images/phosphor/minus.svg'
 import Terminal from '../../../images/phosphor/terminal.svg'
 import TerminalDuotone from '../../../images/phosphor/terminal-duotone.svg'
 import RocketLaunch from '../../../images/phosphor/rocket-launch.svg'
+import RocketLaunchDuotone from '../../../images/phosphor/rocket-launch-duotone.svg'
 import Users from '../../../images/phosphor/users.svg'
 import UsersDuotone from '../../../images/phosphor/users-duotone.svg'
 import ChatsCircle from '../../../images/phosphor/chats-circle.svg'
@@ -41,6 +42,8 @@ import Fingerprint from '../../../images/phosphor/fingerprint.svg'
 import FingerprintDuotone from '../../../images/phosphor/fingerprint-duotone.svg'
 import GitMerge from '../../../images/phosphor/git-merge.svg'
 import GitMergeDuotone from '../../../images/phosphor/git-merge-duotone.svg'
+import GitPR from '../../../images/phosphor/git-pull-request.svg'
+import GitPRDuotone from '../../../images/phosphor/git-pull-request-duotone.svg'
 import Flag from '../../../images/phosphor/flag.svg'
 import FlagBold from '../../../images/phosphor/flag-bold.svg'
 import FlagDuotone from '../../../images/phosphor/flag-duotone.svg'
@@ -96,6 +99,7 @@ export {
   Terminal,
   TerminalDuotone,
   RocketLaunch,
+  RocketLaunchDuotone,
   Users,
   UsersDuotone,
   ChatsCircle,
@@ -106,6 +110,8 @@ export {
   FingerprintDuotone,
   GitMerge,
   GitMergeDuotone,
+  GitPR,
+  GitPRDuotone,
   Flag,
   FlagBold,
   FlagDuotone,
@@ -154,6 +160,7 @@ type IconName =
   | 'BookOpen'
   | 'Fingerprint'
   | 'GitMerge'
+  | 'GitPR'
   | 'Flag'
   | 'List'
   | 'Code'
