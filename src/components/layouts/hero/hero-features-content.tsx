@@ -1,5 +1,6 @@
-import IconWrapper from '../../freestanding/icon/icon-wrapper'
 import React from 'react'
+
+import IconWrapper from '../../freestanding/icon/icon-wrapper'
 
 const Code = (
   <IconWrapper color={'themed-primary'} icon={'CodeDuotone'} size={'32'} />

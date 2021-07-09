@@ -1,9 +1,11 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
 import cn from 'classnames'
-import * as styles from './jobs-list.module.css'
+import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
+
 import Button from '../../freestanding/button/button'
 import Container from '../../freestanding/containers/container'
+import Grid from '../../freestanding/containers/grid'
+
 import {
   pb16,
   pb32,
@@ -11,8 +13,7 @@ import {
   pb8,
   pl8
 } from '../../freestanding/utils/padding.module.css'
-import Grid from '../../freestanding/containers/grid'
-import IconWrapper from '../../freestanding/icon/icon-wrapper'
+import * as styles from './jobs-list.module.css'
 
 interface PropTypes {
   title: string
@@ -33,18 +34,16 @@ type Edge = {
 }
 
 const MapPinLine = () => (
-  <IconWrapper
-    color={'themed-primary'}
-    icon={'MapPinLineDuotone'}
-    size={'16'}
+  <i
+    className={'themed-primary ph-map-pin-line ph-map-pin-line-duotone size16'}
   />
 )
 
 const ClockClockwise = () => (
-  <IconWrapper
-    color={'themed-primary'}
-    icon={'ClockClockwiseDuotone'}
-    size={'16'}
+  <i
+    className={
+      'themed-primary ph-clock-clockwise ph-clock-clockwise-duotone size16'
+    }
   />
 )
 

@@ -1,6 +1,7 @@
+import React from 'react'
+
 import Button from '../../freestanding/button/button'
 import IconWrapper from '../../freestanding/icon/icon-wrapper'
-import React from 'react'
 
 const ArrowRightThemed = (
   <IconWrapper color={'themed-primary'} icon={'ArrowRightBold'} size={'16'} />

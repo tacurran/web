@@ -1,11 +1,13 @@
-import React from 'react'
-import * as styles from './jobs-hero.module.css'
 import cn from 'classnames'
+import React from 'react'
+
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
-import { pb16, pb32 } from '../../freestanding/utils/padding.module.css'
 import ContentText from '../../freestanding/content/content-text'
 import Molecule from '../../freestanding/molecule/molecule'
+
+import { pb16, pb32 } from '../../freestanding/utils/padding.module.css'
+import * as styles from './jobs-hero.module.css'
 
 interface PropTypes {
   title: string

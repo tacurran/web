@@ -1,10 +1,11 @@
-import React from 'react'
 import { graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import React from 'react'
+
+import BlogSection from '../components/blog-section'
+import JobsHero from '../components/layouts/jobs/jobs-hero'
 import Layout from '../components/layouts/layout/layout'
 import SEO from '../components/layouts/seo/seo'
-import BlogSection from '../components/blog-section'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
-import JobsHero from '../components/layouts/jobs/jobs-hero'
 
 export default function PageTemplate(props: any) {
   const { mdx } = props.data // data.mdx holds our post data
@@ -25,7 +26,7 @@ export default function PageTemplate(props: any) {
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     mdx(frontmatter: { path: { eq: $path } }) {
       body
       frontmatter {

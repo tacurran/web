@@ -1,16 +1,18 @@
-import React from 'react'
-import * as styles from './hero-features.module.css'
 import cn from 'classnames'
+import React from 'react'
+
+import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
 import ContentText from '../../freestanding/content/content-text'
+
 import {
   pb32,
   pb48,
   pb64,
   pb8
 } from '../../freestanding/utils/padding.module.css'
-import ColourWrapper from '../../freestanding/colour/colour-wrapper'
+import * as styles from './hero-features.module.css'
 
 export interface Text {
   icon?: React.ReactElement
