@@ -1,25 +1,25 @@
 import React from 'react'
 
-import IconWrapper from '../../freestanding/icon/icon-wrapper'
-
-const Code = (
-  <IconWrapper color={'themed-primary'} icon={'CodeDuotone'} size={'32'} />
-)
+const Code = <i className={'themed-primary size32 ph-code ph-code-duotone'} />
 const CirclesThreePlus = (
-  <IconWrapper
-    color={'themed-primary'}
-    icon={'CirclesThreePlusDuotone'}
-    size={'32'}
+  <i
+    className={
+      'themed-primary size32 ph-circles-three-plus ph-circles-three-plus-duotone'
+    }
   />
 )
 const GitPR = (
-  <IconWrapper color={'themed-primary'} icon={'GitPRDuotone'} size={'32'} />
+  <i
+    className={
+      'themed-primary size32 ph-git-pull-request ph-git-pull-request-duotone'
+    }
+  />
 )
 const RocketLaunch = (
-  <IconWrapper
-    color={'themed-primary'}
-    icon={'RocketLaunchDuotone'}
-    size={'32'}
+  <i
+    className={
+      'themed-primary size32 ph-rocket-launch ph-rocket-launch-duotone'
+    }
   />
 )
 
