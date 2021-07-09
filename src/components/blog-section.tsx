@@ -9,13 +9,15 @@ import { pb32 } from './freestanding/utils/padding.module.css'
 
 interface PropTypes {
   children: ReactNode
-  alt?: boolean
+  padded?: boolean
   overrideStyles?: object
 }
 
-const BlogSection = ({ children, alt, overrideStyles }: PropTypes) => (
+const BlogSection = ({ children, padded, overrideStyles }: PropTypes) => (
   <div
-    className={!alt ? styles.blogSection : styles.blogSectionAlt}
+    className={
+      !padded ? cn(styles.blogSection) : cn(styles.padded, styles.blogSection)
+    }
     style={overrideStyles}
   >
     <Container fluid={true} alignItems={'center'} justify={'center'}>

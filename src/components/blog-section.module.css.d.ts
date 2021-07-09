@@ -1,5 +1,5 @@
 declare const styles: {
-  readonly blogSectionAlt: string
+  readonly padded: string
   readonly blogSection: string
   readonly section: string
 }

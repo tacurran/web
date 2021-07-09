@@ -1,8 +1,7 @@
 @import '../styles/properties.css';
 
-.blog-section-alt {
+.padded.blog-section {
   padding: 128px 0;
-  background-color: var(--colors-base-white);
 }
 
 .blog-section {
