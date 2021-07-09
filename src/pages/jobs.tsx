@@ -32,11 +32,6 @@ const IndexPage = () => {
             future of Ory with us.
           </>
         }
-        buttons={
-          <Button to={'mailto:jobs@ory.sh'} style={'filled'}>
-            Work with us
-          </Button>
-        }
       />
       <HeroFeatures {...heroFeaturesJobsValues} />
       <Quickstart {...quickstartJobs} />
