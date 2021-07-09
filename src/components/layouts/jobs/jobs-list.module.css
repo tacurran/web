@@ -3,28 +3,23 @@
   padding-bottom: 6rem;
 }
 
+.job-heading {
+  text-align: center;
+}
+
 .job-item {
   background: var(--colors-themed-background--next);
   color: var(--colors-base-grey--next);
-  border-color: transparent;
-  border-radius: unset;
-  display: flex;
-  justify-content: flex-start;
-  padding: 32px;
-  flex: 0 100%;
+  border: 1px solid transparent;
+  padding: 2rem;
   margin-bottom: 2rem;
 
+  &:hover {
+    border-color: var(--colors-themed-primary--next);
+  }
   &:last-child {
     margin-bottom: unset;
   }
-}
-
-.job-info {
-  flex: 0 100%;
-}
-
-.job-title {
-  flex: 0 100%;
 }
 .job-details {
   display: flex;
@@ -32,9 +27,4 @@
   flex-direction: row;
   flex-wrap: nowrap;
   flex: 0 100%;
-}
-
-.job-description {
-  flex: 0 100%;
-  color: var(--colors-base-grey--next);
 }
