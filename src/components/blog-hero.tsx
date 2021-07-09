@@ -1,12 +1,15 @@
-import React from 'react'
-import * as styles from './blog-hero.module.css'
 import cn from 'classnames'
+import React from 'react'
+
 import { AuthorLink } from './author'
 import Container from './freestanding/containers/container'
 import Grid from './freestanding/containers/grid'
-import { pb16, pb24, pb32, pb48 } from './freestanding/utils/padding.module.css'
 import ContentText from './freestanding/content/content-text'
 import Molecule from './freestanding/molecule/molecule'
+
+import { blogHero } from './blog-hero.module.css'
+import { pb16, pb24, pb32, pb48 } from './freestanding/utils/padding.module.css'
+
 
 interface PropTypes {
   title: string
@@ -17,7 +20,7 @@ interface PropTypes {
 }
 
 const BlogHero = ({ title, date, author, overline, subtitle }: PropTypes) => (
-  <div className={cn(styles.blogHero)}>
+  <div className={cn(blogHero)}>
     <Container fluid={true} alignItems={'center'} justify={'center'}>
       <Grid lg={7} md={10} sm={12} xs={12}>
         <ContentText>

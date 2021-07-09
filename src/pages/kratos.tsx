@@ -1,21 +1,23 @@
 import React from 'react'
+
+import CodeBox, { Languages } from '../components/codebox'
 import Button from '../components/freestanding/button/button'
+import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 import Adopters from '../components/layouts/adopters/adopters'
-import FeatureList from '../components/layouts/featurelist/feature-list'
+import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
-import Newsletter from '../components/newsletter'
+import FeatureList from '../components/layouts/featurelist/feature-list'
+import { featureListKratos } from '../components/layouts/featurelist/feature-list-content'
 import Hero from '../components/layouts/hero/hero'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
-import kratosPolyglot from '../images/kratos/kratos_p.svg'
-import kratosProcess from '../images/kratos/kratos.svg'
-import CodeBox, { Languages } from '../components/codebox'
-import SEO from '../components/layouts/seo/seo'
-import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
-import Stats from '../components/layouts/stats/stats'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
-import IconWrapper from '../components/freestanding/icon/icon-wrapper'
-import { featureListKratos } from '../components/layouts/featurelist/feature-list-content'
+import SEO from '../components/layouts/seo/seo'
+import Stats from '../components/layouts/stats/stats'
+import Newsletter from '../components/newsletter'
+
+import kratosProcess from '../images/kratos/kratos.svg'
+import kratosPolyglot from '../images/kratos/kratos_p.svg'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -65,12 +67,8 @@ export const registrationRoute = (req, res) => {
 )
 
 const IndexPage = () => {
-  const ArrowRight = (
-    <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
-  )
-  const CheckCircleHero = (
-    <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
-  )
+  const ArrowRight = <i className={'themed-primary ph-arrow-right size16'} />
+  const CheckCircleHero = <i className={'base-white ph-check-circle size24'} />
   return (
     <Layout>
       <SEO

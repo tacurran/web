@@ -1,5 +1,6 @@
 const path = require(`path`)
 const fetch = require('node-fetch')
+const webpack = require('webpack')
 
 const trimLeft = (s, charlist) => {
   if (charlist === undefined) {
@@ -117,4 +118,51 @@ exports.sourceNodes = async ({
       console.error(err)
       return Promise.resolve()
     })
+}
+
+exports.onCreateWebpackConfig = ({ stage, actions, getConfig, loaders, plugins }) => {
+  /* https://github.com/gatsbyjs/gatsby/discussions/30169#discussioncomment-877458 */
+  // See also https://github.com/mediacurrent/gatsby-plugin-silence-css-order-warning/issues/1
+  const config = getConfig()
+  const miniCssExtractPluginIndex = config.plugins.findIndex(
+    plugin => plugin.constructor.name === 'MiniCssExtractPlugin'
+  )
+
+  if (miniCssExtractPluginIndex > -1) {
+    // remove miniCssExtractPlugin from plugins list
+    config.plugins.splice(miniCssExtractPluginIndex, 1)
+
+    // re-add mini-css-extract-plugin
+    if (stage === 'build-javascript') {
+      config.plugins.push(plugins.extractText({
+        filename: `[name].[contenthash].css`,
+        chunkFilename: `[name].[contenthash].css`,
+        ignoreOrder: true
+      }))
+    } else {
+      config.plugins.push(plugins.extractText({
+        filename: `[name].css`,
+        chunkFilename: `[id].css`,
+        ignoreOrder: true
+      }))
+    }
+  }
+  actions.replaceWebpackConfig(config)
+  /* end */
+
+  actions.setWebpackConfig({
+    resolve: {
+      fallback: {
+        'stream': require.resolve('stream-browserify'),
+        'events': require.resolve('events'),
+        'buffer': require.resolve('buffer/')
+      }
+    },
+    plugins: [
+      new webpack.ProvidePlugin({
+        process: 'process/browser',
+        Buffer: ['buffer', 'Buffer']
+      })
+    ]
+  })
 }

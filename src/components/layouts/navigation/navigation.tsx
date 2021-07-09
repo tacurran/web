@@ -1,23 +1,25 @@
-import React, { useState } from 'react'
-import * as styles from './navigation.module.css'
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import cn from 'classnames'
-import Container from '../../freestanding/containers/container'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
+import { useRef } from 'react'
+
 import Button from '../../freestanding/button/button'
+import Container from '../../freestanding/containers/container'
 import ContentText from '../../freestanding/content/content-text'
-import MenuItem from '../../freestanding/dropdown/menu-item'
-import DropdownMenu from '../../freestanding/dropdown/dropdown-menu'
 import DropdownItem from '../../freestanding/dropdown/dropdown-item'
-import { pb24, pb8, pr32 } from '../../freestanding/utils/padding.module.css'
-import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
+import DropdownMenu from '../../freestanding/dropdown/dropdown-menu'
+import DropdownMobileItem from '../../freestanding/dropdown/dropdown-mobile-item'
 import {
   DropdownMobileMenu,
   DropdownMobileMenuSection
 } from '../../freestanding/dropdown/dropdown-mobile-menu'
-import DropdownMobileItem from '../../freestanding/dropdown/dropdown-mobile-item'
-import { useEffect } from 'react'
-import { useRef } from 'react'
-import { useScrollPosition } from '@n8tb1t/use-scroll-position'
+import MenuItem from '../../freestanding/dropdown/menu-item'
 import IconWrapper from '../../freestanding/icon/icon-wrapper'
+import MoleculeSeparator from '../../freestanding/molecule/molecule-separator'
+
+import { pb24, pb8, pr32 } from '../../freestanding/utils/padding.module.css'
+import * as styles from './navigation.module.css'
 
 export interface DropdownMenuItem {
   title: string | React.ReactElement
@@ -102,9 +104,7 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
     mobileNav = cn(styles.mobileNavActive)
   }
 
-  const List = (
-    <IconWrapper color={'themed-primary'} icon={'List'} size={'32'} />
-  )
+  const List = <i className={'ph-list themed-primary size32'} />
 
   // once clicked outside of the nav the menu will close
   onClickOutsideRef(
@@ -117,7 +117,6 @@ const Navigation = ({ logo, dropdownMenu, mobileMenu, sideNav }: PropTypes) => {
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
-      console.log(`prevPos: ${prevPos.y}\ncurrPos: ${currPos.y}`)
       if (prevPos.y > -300 || currPos.y > -300) {
         setHideOnScroll(true)
         return

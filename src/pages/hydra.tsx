@@ -1,22 +1,24 @@
 import React from 'react'
+
+import CodeBox, { Languages } from '../components/codebox'
 import Button from '../components/freestanding/button/button'
+import IconWrapper from '../components/freestanding/icon/icon-wrapper'
+import Adopters from '../components/layouts/adopters/adopters'
+import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
+import YoutubeEmbed from '../components/layouts/embed/embed'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
-import Newsletter from '../components/newsletter'
 import FeatureList from '../components/layouts/featurelist/feature-list'
+import { featureListHydra } from '../components/layouts/featurelist/feature-list-content'
 import Hero from '../components/layouts/hero/hero'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
-import hydraPolyglot from '../images/hydra/hydra_p.svg'
-import hydraProcess from '../images/hydra/hydra.svg'
-import CodeBox, { Languages } from '../components/codebox'
-import SEO from '../components/layouts/seo/seo'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
-import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
-import Adopters from '../components/layouts/adopters/adopters'
+import SEO from '../components/layouts/seo/seo'
 import Stats from '../components/layouts/stats/stats'
-import IconWrapper from '../components/freestanding/icon/icon-wrapper'
-import YoutubeEmbed from '../components/layouts/embed/embed'
-import { featureListHydra } from '../components/layouts/featurelist/feature-list-content'
+import Newsletter from '../components/newsletter'
+
+import hydraProcess from '../images/hydra/hydra.svg'
+import hydraPolyglot from '../images/hydra/hydra_p.svg'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -55,12 +57,8 @@ const IntegrationCodeBox = () => (
 )
 
 const IndexPage = () => {
-  const ArrowRight = (
-    <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
-  )
-  const CheckCircleHero = (
-    <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
-  )
+  const ArrowRight = <i className={'themed-primary ph-arrow-right size16'} />
+  const CheckCircleHero = <i className={'base-white ph-check-circle size24'} />
 
   return (
     <Layout>

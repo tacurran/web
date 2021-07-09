@@ -1,35 +1,33 @@
-import React from 'react'
-import * as styles from './layout.module.css'
 import cn from 'classnames'
-import Footer from '../footer/footer'
-import Navigation from '../navigation/navigation'
-import logoOryFooter from '../../../images/logo-ory-footer.svg'
-import Button from '../../freestanding/button/button'
-import ColourWrapper from '../../freestanding/colour/colour-wrapper'
-import oryLogoPrimary from '../../../images/logo-ory-primary.svg'
-
+import 'prismjs/components/prism-bash'
+import 'prismjs/components/prism-go'
 import 'prismjs/components/prism-javascript'
 import 'prismjs/components/prism-jsx'
+import 'prismjs/components/prism-pug'
+import 'prismjs/components/prism-shell-session'
 import 'prismjs/components/prism-tsx'
 import 'prismjs/components/prism-typescript'
-import 'prismjs/components/prism-pug'
-import 'prismjs/components/prism-go'
 import 'prismjs/components/prism-yaml'
-import 'prismjs/components/prism-bash'
-import 'prismjs/components/prism-shell-session'
+import React from 'react'
+
+import Button from '../../freestanding/button/button'
+import ColourWrapper from '../../freestanding/colour/colour-wrapper'
 import IconWrapper from '../../freestanding/icon/icon-wrapper'
+import Footer from '../footer/footer'
+import Navigation from '../navigation/navigation'
+
+import * as styles from './layout.module.css'
+
+import logoOryFooter from '../../../images/logo-ory-footer.svg'
+import oryLogoPrimary from '../../../images/logo-ory-primary.svg'
 
 interface PropTypes {
   children?: React.ReactNode
 }
 
 const Layout = ({ children }: PropTypes) => {
-  const arrowRight = (
-    <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
-  )
-  const signIn = (
-    <IconWrapper color={'themed-primary'} icon={'SignIn'} size={'24'} />
-  )
+  const arrowRight = <i className="ph-arrow-right themed-primary size16" />
+  const signIn = <i className="ph-sign-in themed-primary size24" />
 
   return (
     <div className={cn(styles.layout)}>
@@ -411,21 +409,17 @@ const Layout = ({ children }: PropTypes) => {
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper
-              color={'base-grey-200'}
-              icon={'GithubLogoDuotone'}
-              size={'24'}
-            />
+            <i className={'ph-github-logo base-grey-200 size24'} />
           </Button>,
           <Button
             to={'https://www.youtube.com/channel/UC9hCxZZeviexX0GclD0brrw'}
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper
-              color={'base-grey-200'}
-              icon={'YoutubeLogoDuotone'}
-              size={'24'}
+            <i
+              className={
+                'ph-youtube-logo ph-youtube-logo-duotone base-grey-200 size24'
+              }
             />
           </Button>,
           <Button
@@ -433,33 +427,21 @@ const Layout = ({ children }: PropTypes) => {
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper
-              color={'base-grey-200'}
-              icon={'TwitterLogoDuotone'}
-              size={'24'}
-            />
+            <i className={'ph-twitter-logo base-grey-200 size24'} />
           </Button>,
           <Button
             to={'https://slack.ory.sh/'}
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper
-              color={'base-grey-200'}
-              icon={'SlackLogoDuotone'}
-              size={'24'}
-            />
+            <i className={'ph-slack-logo base-grey-200 size24'} />
           </Button>,
           <Button
             to={'https://www.linkedin.com/company/ory-corp/'}
             style={'none'}
             openInNewWindow={true}
           >
-            <IconWrapper
-              color={'base-grey-200'}
-              icon={'LinkedinLogoDuotone'}
-              size={'24'}
-            />
+            <i className={'ph-linkedin-logo base-grey-200 size24'} />
           </Button>
         ]}
         legal={[

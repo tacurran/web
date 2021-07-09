@@ -1,8 +1,10 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import Link from '../components/link'
-import * as styles from './blog-summary-section.module.css'
 import cn from 'classnames'
+import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
+
+import Link from '../components/link'
+
+import * as styles from './blog-summary-section.module.css'
 
 type Edge = {
   node: {

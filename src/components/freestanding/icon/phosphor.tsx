@@ -1,69 +1,60 @@
-import GithubLogo from '../../../images/phosphor/github-logo.svg'
-import GithubLogoDuotone from '../../../images/phosphor/github-logo-duotone.svg'
-import LinkedinLogo from '../../../images/phosphor/linkedin-logo.svg'
-import LinkedinLogoDuotone from '../../../images/phosphor/linkedin-logo-duotone.svg'
-import SlackLogo from '../../../images/phosphor/slack-logo.svg'
-import SlackLogoDuotone from '../../../images/phosphor/slack-logo-duotone.svg'
-import YoutubeLogo from '../../../images/phosphor/youtube-logo.svg'
-import YoutubeLogoDuotone from '../../../images/phosphor/youtube-logo-duotone.svg'
-import TwitterLogo from '../../../images/phosphor/twitter-logo.svg'
-import TwitterLogoDuotone from '../../../images/phosphor/twitter-logo-duotone.svg'
-import ArrowRight from '../../../images/phosphor/arrow-right.svg'
 import ArrowRightBold from '../../../images/phosphor/arrow-right-bold.svg'
-import CaretRight from '../../../images/phosphor/caret-right.svg'
+import ArrowRight from '../../../images/phosphor/arrow-right.svg'
+import BookOpenDuotone from '../../../images/phosphor/book-open-duotone.svg'
+import BookOpen from '../../../images/phosphor/book-open.svg'
 import CaretDown from '../../../images/phosphor/caret-down.svg'
+import CaretRight from '../../../images/phosphor/caret-right.svg'
 import CaretUp from '../../../images/phosphor/caret-up.svg'
-import Circle from '../../../images/phosphor/circle.svg'
-import Triangle from '../../../images/phosphor/triangle.svg'
-import CirclesThreePlus from '../../../images/phosphor/circles-three-plus.svg'
-import CirclesThreePlusDuotone from '../../../images/phosphor/circles-three-plus-duotone.svg'
-import CheckCircle from '../../../images/phosphor/check-circle.svg'
+import ChatsCircleDuotone from '../../../images/phosphor/chats-circle-duotone.svg'
+import ChatsCircle from '../../../images/phosphor/chats-circle.svg'
 import CheckCircleBold from '../../../images/phosphor/check-circle-bold.svg'
 import CheckCircleDuotone from '../../../images/phosphor/check-circle-duotone.svg'
-import SignIn from '../../../images/phosphor/sign-in.svg'
-import UserPlus from '../../../images/phosphor/user-plus.svg'
-import UserPlusDuotone from '../../../images/phosphor/user-plus-duotone.svg'
-import MapTrifold from '../../../images/phosphor/map-trifold.svg'
-import Plus from '../../../images/phosphor/plus.svg'
-import PlusCircle from '../../../images/phosphor/plus-circle.svg'
-import PlusCircleBold from '../../../images/phosphor/plus-circle-bold.svg'
-import Minus from '../../../images/phosphor/minus.svg'
-import Terminal from '../../../images/phosphor/terminal.svg'
-import TerminalDuotone from '../../../images/phosphor/terminal-duotone.svg'
-import RocketLaunch from '../../../images/phosphor/rocket-launch.svg'
-import RocketLaunchDuotone from '../../../images/phosphor/rocket-launch-duotone.svg'
-import Users from '../../../images/phosphor/users.svg'
-import UsersDuotone from '../../../images/phosphor/users-duotone.svg'
-import ChatsCircle from '../../../images/phosphor/chats-circle.svg'
-import ChatsCircleDuotone from '../../../images/phosphor/chats-circle-duotone.svg'
-import BookOpen from '../../../images/phosphor/book-open.svg'
-import BookOpenDuotone from '../../../images/phosphor/book-open-duotone.svg'
-import Fingerprint from '../../../images/phosphor/fingerprint.svg'
+import CheckCircle from '../../../images/phosphor/check-circle.svg'
+import Circle from '../../../images/phosphor/circle.svg'
+import CirclesThreePlusDuotone from '../../../images/phosphor/circles-three-plus-duotone.svg'
+import CirclesThreePlus from '../../../images/phosphor/circles-three-plus.svg'
+import CodeDuotone from '../../../images/phosphor/code-duotone.svg'
+import Code from '../../../images/phosphor/code.svg'
 import FingerprintDuotone from '../../../images/phosphor/fingerprint-duotone.svg'
-import GitMerge from '../../../images/phosphor/git-merge.svg'
-import GitMergeDuotone from '../../../images/phosphor/git-merge-duotone.svg'
-import GitPR from '../../../images/phosphor/git-pull-request.svg'
-import GitPRDuotone from '../../../images/phosphor/git-pull-request-duotone.svg'
-import Flag from '../../../images/phosphor/flag.svg'
+import Fingerprint from '../../../images/phosphor/fingerprint.svg'
 import FlagBold from '../../../images/phosphor/flag-bold.svg'
 import FlagDuotone from '../../../images/phosphor/flag-duotone.svg'
-import List from '../../../images/phosphor/list.svg'
-import Code from '../../../images/phosphor/code.svg'
-import CodeDuotone from '../../../images/phosphor/code-duotone.svg'
-import LockOpen from '../../../images/phosphor/lock-open.svg'
-import LockOpenDuotone from '../../../images/phosphor/lock-open-duotone.svg'
-import UserGear from '../../../images/phosphor/user-gear.svg'
-import UserGearDuotone from '../../../images/phosphor/user-gear-duotone.svg'
-import ShieldWarning from '../../../images/phosphor/shield-warning.svg'
-import ShieldWarningDuotone from '../../../images/phosphor/shield-warning-duotone.svg'
-import Key from '../../../images/phosphor/key.svg'
+import Flag from '../../../images/phosphor/flag.svg'
+import GitMergeDuotone from '../../../images/phosphor/git-merge-duotone.svg'
+import GitMerge from '../../../images/phosphor/git-merge.svg'
+import GithubLogoDuotone from '../../../images/phosphor/github-logo-duotone.svg'
+import GithubLogo from '../../../images/phosphor/github-logo.svg'
 import KeyDuotone from '../../../images/phosphor/key-duotone.svg'
-import PaperPlaneTilt from '../../../images/phosphor/paper-plane-tilt.svg'
-import PaperPlaneTiltDuotone from '../../../images/phosphor/paper-plane-tilt-duotone.svg'
-import ClockClockwise from '../../../images/phosphor/clock-clockwise.svg'
-import ClockClockwiseDuotone from '../../../images/phosphor/clock-clockwise-duotone.svg'
-import MapPinLine from '../../../images/phosphor/map-pin-line.svg'
-import MapPinLineDuotone from '../../../images/phosphor/map-pin-line-duotone.svg'
+import Key from '../../../images/phosphor/key.svg'
+import LinkedinLogoDuotone from '../../../images/phosphor/linkedin-logo-duotone.svg'
+import LinkedinLogo from '../../../images/phosphor/linkedin-logo.svg'
+import List from '../../../images/phosphor/list.svg'
+import LockOpenDuotone from '../../../images/phosphor/lock-open-duotone.svg'
+import LockOpen from '../../../images/phosphor/lock-open.svg'
+import MapTrifold from '../../../images/phosphor/map-trifold.svg'
+import Minus from '../../../images/phosphor/minus.svg'
+import PlusCircleBold from '../../../images/phosphor/plus-circle-bold.svg'
+import PlusCircle from '../../../images/phosphor/plus-circle.svg'
+import Plus from '../../../images/phosphor/plus.svg'
+import RocketLaunch from '../../../images/phosphor/rocket-launch.svg'
+import ShieldWarningDuotone from '../../../images/phosphor/shield-warning-duotone.svg'
+import ShieldWarning from '../../../images/phosphor/shield-warning.svg'
+import SignIn from '../../../images/phosphor/sign-in.svg'
+import SlackLogoDuotone from '../../../images/phosphor/slack-logo-duotone.svg'
+import SlackLogo from '../../../images/phosphor/slack-logo.svg'
+import TerminalDuotone from '../../../images/phosphor/terminal-duotone.svg'
+import Terminal from '../../../images/phosphor/terminal.svg'
+import Triangle from '../../../images/phosphor/triangle.svg'
+import TwitterLogoDuotone from '../../../images/phosphor/twitter-logo-duotone.svg'
+import TwitterLogo from '../../../images/phosphor/twitter-logo.svg'
+import UserGearDuotone from '../../../images/phosphor/user-gear-duotone.svg'
+import UserGear from '../../../images/phosphor/user-gear.svg'
+import UserPlusDuotone from '../../../images/phosphor/user-plus-duotone.svg'
+import UserPlus from '../../../images/phosphor/user-plus.svg'
+import UsersDuotone from '../../../images/phosphor/users-duotone.svg'
+import Users from '../../../images/phosphor/users.svg'
+import YoutubeLogoDuotone from '../../../images/phosphor/youtube-logo-duotone.svg'
+import YoutubeLogo from '../../../images/phosphor/youtube-logo.svg'
 
 export {
   GithubLogo,
@@ -99,7 +90,6 @@ export {
   Terminal,
   TerminalDuotone,
   RocketLaunch,
-  RocketLaunchDuotone,
   Users,
   UsersDuotone,
   ChatsCircle,
@@ -110,8 +100,6 @@ export {
   FingerprintDuotone,
   GitMerge,
   GitMergeDuotone,
-  GitPR,
-  GitPRDuotone,
   Flag,
   FlagBold,
   FlagDuotone,
@@ -125,13 +113,7 @@ export {
   ShieldWarning,
   ShieldWarningDuotone,
   KeyDuotone,
-  Key,
-  PaperPlaneTilt,
-  PaperPlaneTiltDuotone,
-  ClockClockwise,
-  ClockClockwiseDuotone,
-  MapPinLine,
-  MapPinLineDuotone
+  Key
 }
 type IconName =
   | 'GithubLogo'
@@ -160,7 +142,6 @@ type IconName =
   | 'BookOpen'
   | 'Fingerprint'
   | 'GitMerge'
-  | 'GitPR'
   | 'Flag'
   | 'List'
   | 'Code'
@@ -168,9 +149,6 @@ type IconName =
   | 'UserGear'
   | 'ShieldWarning'
   | 'Key'
-  | 'PaperPlane'
-  | 'ClockClockwise'
-  | 'MapPinLine'
 
 type IconType = 'Duotone' | 'Bold'
 

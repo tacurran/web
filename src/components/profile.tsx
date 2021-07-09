@@ -1,10 +1,12 @@
-import React from 'react'
-import Img from 'gatsby-image'
 import cn from 'classnames'
-import * as styles from './profile.module.css'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import React from 'react'
+
 import Button from './freestanding/button/button'
-import { pb16, pb8, pr16, pr8 } from './freestanding/utils/padding.module.css'
 import IconWrapper from './freestanding/icon/icon-wrapper'
+
+import { pb16, pb8, pr16, pr8 } from './freestanding/utils/padding.module.css'
+import * as styles from './profile.module.css'
 
 interface PropTypes {
   name: string
@@ -35,31 +37,19 @@ const socialWithIcon = ({ href, network }: SocialLinks): resolvedSocial => {
   switch (network) {
     case SocialNetworks.github:
       Icon = (
-        <IconWrapper
-          color={'base-grey-400'}
-          icon={'GithubLogoDuotone'}
-          size={'24'}
-        />
+        <i className="ph-github-logo ph-github-logo-duotone base-grey-400 size24" />
       )
       alt = 'GitHub'
       break
     case SocialNetworks.linkedin:
       Icon = (
-        <IconWrapper
-          color={'base-grey-400'}
-          icon={'LinkedinLogoDuotone'}
-          size={'24'}
-        />
+        <i className="ph-linkedin-logo ph-linkedin-logo-duotone base-grey-400 size24" />
       )
       alt = 'Linkedin'
       break
     case SocialNetworks.twitter:
       Icon = (
-        <IconWrapper
-          color={'base-grey-400'}
-          icon={'TwitterLogoDuotone'}
-          size={'24'}
-        />
+        <i className="ph-twitter-logo ph-twitter-logo-duotone base-grey-400 size24" />
       )
       alt = 'Twitter'
       break
@@ -75,7 +65,7 @@ const socialWithIcon = ({ href, network }: SocialLinks): resolvedSocial => {
 const Profile = ({ name, img, social }: PropTypes) => (
   <div className={cn(styles.profile, pb16)}>
     <div className={cn(pr16)}>
-      <Img fixed={img} alt={name} />
+      <GatsbyImage image={img} alt={name} />
     </div>
     <div>
       <h2 className={cn('font-h5', pb8)}>{name}</h2>

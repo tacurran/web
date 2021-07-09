@@ -1,6 +1,11 @@
-import React from 'react'
-import * as styles from './molecule-separator.module.css'
 import cn from 'classnames'
+import React from 'react'
+
+import {
+  moleculeSeparatorVertical,
+  moleculeSeparatorHorizontal,
+  moleculeSeparator
+} from './molecule-separator.module.css'
 
 interface PropTypes {
   className?: string
@@ -9,17 +14,13 @@ interface PropTypes {
 
 const getStyle = (style: string) => {
   return style === 'vertical'
-    ? styles.moleculeSeparatorVertical
-    : styles.moleculeSeparatorHorizontal
+    ? moleculeSeparatorVertical
+    : moleculeSeparatorHorizontal
 }
 
 const MoleculeSeparator = ({ className, style = 'vertical' }: PropTypes) => (
   <div
-    className={cn(
-      styles.moleculeSeparator,
-      getStyle(style),
-      className && className
-    )}
+    className={cn(moleculeSeparator, getStyle(style), className && className)}
   />
 )
 

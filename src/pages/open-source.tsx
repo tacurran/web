@@ -1,39 +1,31 @@
 import React from 'react'
+
+import Button from '../components/freestanding/button/button'
+import IconWrapper from '../components/freestanding/icon/icon-wrapper'
+import Adopters from '../components/layouts/adopters/adopters'
+import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
+import Coding from '../components/layouts/coding/coding'
 import Layout from '../components/layouts/layout/layout'
+import Projects from '../components/layouts/projects/projects'
 import Quickstart from '../components/layouts/quickstart/quickstart'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
-import Stats from '../components/layouts/stats/stats'
 import Quotes from '../components/layouts/quotes/quotes'
-import SEO from '../components/layouts/seo/seo'
-import Projects from '../components/layouts/projects/projects'
 import { quotesDefault } from '../components/layouts/quotes/quotes-content'
-import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
-import Adopters from '../components/layouts/adopters/adopters'
-import Button from '../components/freestanding/button/button'
+import SEO from '../components/layouts/seo/seo'
+import Stats from '../components/layouts/stats/stats'
+
 import codeboxIllustration from '../images/illustrations/codebox.svg'
-import Coding from '../components/layouts/coding/coding'
-import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 
 const IndexPage = () => {
   const BookOpen = (
-    <IconWrapper color={'base-white'} icon={'BookOpenDuotone'} size={'24'} />
+    <i className={'base-white ph-book-open ph-book-open-duotone size24'} />
   )
   const Terminal = (
-    <IconWrapper
-      color={'themed-primary'}
-      icon={'TerminalDuotone'}
-      size={'32'}
-    />
+    <i className={'themed-primary ph-terminal ph-terminal-duotone size32'} />
   )
-  const ArrowRight = (
-    <IconWrapper color={'base-white'} icon={'ArrowRightBold'} size={'16'} />
-  )
+  const ArrowRight = <i className={'base-white ph-arrow-right-bold size16'} />
   const GitMerge = (
-    <IconWrapper
-      color={'themed-primary'}
-      icon={'GitMergeDuotone'}
-      size={'32'}
-    />
+    <i className={'themed-primary ph-git-merge ph-git-merge-duotone size32'} />
   )
 
   return (

@@ -1,21 +1,23 @@
 import React from 'react'
+
+import CodeBox, { Languages } from '../components/codebox'
 import Button from '../components/freestanding/button/button'
+import IconWrapper from '../components/freestanding/icon/icon-wrapper'
 import Adopters from '../components/layouts/adopters/adopters'
+import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
+import FeatureImage from '../components/layouts/feature-image/feature-image'
 import FeatureList from '../components/layouts/featurelist/feature-list'
 import { featureListKeto } from '../components/layouts/featurelist/feature-list-content'
-import FeatureImage from '../components/layouts/feature-image/feature-image'
-import Newsletter from '../components/newsletter'
 import Hero from '../components/layouts/hero/hero'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
-import ketoPolyglot from '../images/keto/keto_p.svg'
-import ketoProcess from '../images/keto/keto.svg'
-import CodeBox, { Languages } from '../components/codebox'
-import SEO from '../components/layouts/seo/seo'
-import { adoptersDefault } from '../components/layouts/adopters/adopters-content'
-import Stats from '../components/layouts/stats/stats'
 import { quickstartOpenSource } from '../components/layouts/quickstart/quickstart-content'
-import IconWrapper from '../components/freestanding/icon/icon-wrapper'
+import SEO from '../components/layouts/seo/seo'
+import Stats from '../components/layouts/stats/stats'
+import Newsletter from '../components/newsletter'
+
+import ketoProcess from '../images/keto/keto.svg'
+import ketoPolyglot from '../images/keto/keto_p.svg'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -95,12 +97,8 @@ checkClient.check(checkRequest, (error, resp) => {
 )
 
 const IndexPage = () => {
-  const ArrowRight = (
-    <IconWrapper color={'themed-primary'} icon={'ArrowRight'} size={'16'} />
-  )
-  const CheckCircleHero = (
-    <IconWrapper color={'base-white'} icon={'CheckCircle'} size={'24'} />
-  )
+  const ArrowRight = <i className={'themed-primary ph-arrow-right size16'} />
+  const CheckCircleHero = <i className={'base-white ph-check-circle size24'} />
 
   return (
     <Layout>

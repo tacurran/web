@@ -9,8 +9,10 @@
 import 'normalize.css'
 import 'remark-admonitions/styles/classic.css'
 import 'prismjs/themes/prism.css'
+import 'phosphor-icons/src/css/phosphor.css'
 
 import './src/styles/themes/default.css'
 import './src/styles/global.css'
 import './src/styles/grid.css'
 import './src/styles/typography.css'
+import './src/styles/icons.css'
