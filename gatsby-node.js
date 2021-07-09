@@ -120,12 +120,18 @@ exports.sourceNodes = async ({
     })
 }
 
-exports.onCreateWebpackConfig = ({ stage, actions, getConfig, loaders, plugins }) => {
+exports.onCreateWebpackConfig = ({
+  stage,
+  actions,
+  getConfig,
+  loaders,
+  plugins
+}) => {
   /* https://github.com/gatsbyjs/gatsby/discussions/30169#discussioncomment-877458 */
   // See also https://github.com/mediacurrent/gatsby-plugin-silence-css-order-warning/issues/1
   const config = getConfig()
   const miniCssExtractPluginIndex = config.plugins.findIndex(
-    plugin => plugin.constructor.name === 'MiniCssExtractPlugin'
+    (plugin) => plugin.constructor.name === 'MiniCssExtractPlugin'
   )
 
   if (miniCssExtractPluginIndex > -1) {
@@ -134,17 +140,21 @@ exports.onCreateWebpackConfig = ({ stage, actions, getConfig, loaders, plugins }
 
     // re-add mini-css-extract-plugin
     if (stage === 'build-javascript') {
-      config.plugins.push(plugins.extractText({
-        filename: `[name].[contenthash].css`,
-        chunkFilename: `[name].[contenthash].css`,
-        ignoreOrder: true
-      }))
+      config.plugins.push(
+        plugins.extractText({
+          filename: `[name].[contenthash].css`,
+          chunkFilename: `[name].[contenthash].css`,
+          ignoreOrder: true
+        })
+      )
     } else {
-      config.plugins.push(plugins.extractText({
-        filename: `[name].css`,
-        chunkFilename: `[id].css`,
-        ignoreOrder: true
-      }))
+      config.plugins.push(
+        plugins.extractText({
+          filename: `[name].css`,
+          chunkFilename: `[id].css`,
+          ignoreOrder: true
+        })
+      )
     }
   }
   actions.replaceWebpackConfig(config)
@@ -153,9 +163,9 @@ exports.onCreateWebpackConfig = ({ stage, actions, getConfig, loaders, plugins }
   actions.setWebpackConfig({
     resolve: {
       fallback: {
-        'stream': require.resolve('stream-browserify'),
-        'events': require.resolve('events'),
-        'buffer': require.resolve('buffer/')
+        stream: require.resolve('stream-browserify'),
+        events: require.resolve('events'),
+        buffer: require.resolve('buffer/')
       }
     },
     plugins: [
