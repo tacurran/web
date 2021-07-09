@@ -4,12 +4,6 @@ import React from 'react'
 const Code = (
   <IconWrapper color={'themed-primary'} icon={'CodeDuotone'} size={'32'} />
 )
-const LockOpen = (
-  <IconWrapper color={'themed-primary'} icon={'LockOpenDuotone'} size={'32'} />
-)
-const UserPlus = (
-  <IconWrapper color={'themed-primary'} icon={'UserPlusDuotone'} size={'32'} />
-)
 const CirclesThreePlus = (
   <IconWrapper
     color={'themed-primary'}
@@ -29,6 +23,7 @@ const RocketLaunch = (
 )
 
 export const heroFeaturesJobsBenefits = {
+  thin: true,
   title: 'Work with us to transform',
   description: (
     <>
@@ -90,6 +85,7 @@ export const heroFeaturesJobsBenefits = {
 }
 
 export const heroFeaturesJobsValues = {
+  thin: true,
   small: true,
   title: 'Our Core Values',
   textbox: [
