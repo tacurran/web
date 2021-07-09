@@ -9,21 +9,14 @@ import {
   pb32,
   pb64,
   pb8,
-  pl8,
-  pr8,
-  pt24,
-  pt32
+  pl8
 } from '../../freestanding/utils/padding.module.css'
-import ContentText from '../../freestanding/content/content-text'
-import Molecule from '../../freestanding/molecule/molecule'
-import MoleculeInteraction from '../../freestanding/molecule/molecule-interaction'
 import Grid from '../../freestanding/containers/grid'
 import IconWrapper from '../../freestanding/icon/icon-wrapper'
 
 interface PropTypes {
   title: string
   description?: React.ReactElement
-  buttons?: React.ReactNode
 }
 
 type Edge = {
@@ -55,7 +48,7 @@ const ClockClockwise = () => (
   />
 )
 
-const JobsList = ({ title, description, buttons }: PropTypes) => {
+const JobsList = ({ title, description }: PropTypes) => {
   const data = useStaticQuery(graphql`
     query {
       allMdx(
@@ -80,57 +73,59 @@ const JobsList = ({ title, description, buttons }: PropTypes) => {
     }
   `)
   return (
-    <Container fluid={true} alignItems={'start'} className={cn(styles.jobList)}>
-      <Grid lg={4} md={3} sm={12} xs={12} className={cn(pb64)}>
-        <ContentText>
-          <Molecule>
-            <h2 className={cn('font-h3')}>{title}</h2>
-            <p className={cn('font-p', pt32)}>{description}</p>
-          </Molecule>
-          <MoleculeInteraction className={cn(pt24)}>
-            {buttons}
-          </MoleculeInteraction>
-        </ContentText>
-      </Grid>
-      <Grid lg={6} md={8} sm={12} xs={12}>
-        <Container
-          alignItems={'start'}
-          justify={'start'}
-          className={cn(styles.jobs)}
-        >
-          {(data.allMdx.edges as Edge[]).map(({ node }) => (
-            <Button
-              style={'outlined'}
-              to={node.frontmatter.path}
-              className={cn(styles.jobItem)}
-              key={node.id}
+    <div className={cn(styles.jobList)}>
+      <Container fluid={true} justify={'center'} alignItems={'start'}>
+        <Grid lg={8} md={10} sm={12} xs={12}>
+          <Container fluid={true} justify={'center'}>
+            <Grid
+              lg={8}
+              md={10}
+              sm={12}
+              xs={12}
+              className={cn(styles.jobHeading, pb64)}
             >
-              <div className={cn(styles.jobInfo, pb16)}>
-                <h3 className={cn(styles.jobTitle, 'font-h5', pb8)}>
-                  {node.frontmatter.title}
-                </h3>
-
-                <div className={cn(styles.jobDetails)}>
-                  <MapPinLine />
-                  <p className={cn('font-p-xs', pl8)}>
-                    <b>{node.frontmatter.location}</b>
+              <h2 className={cn('font-h3', pb32)}>{title}</h2>
+              <p className={cn('font-p', 'mute-85')}>{description}</p>
+            </Grid>
+          </Container>
+          <Container>
+            {(data.allMdx.edges as Edge[]).map(({ node }) => (
+              <Button
+                style={'none'}
+                to={node.frontmatter.path}
+                className={cn(styles.jobItem)}
+                key={node.id}
+              >
+                <Grid lg={6} md={6} sm={12} xs={12}>
+                  <div className={cn(pb16)}>
+                    <h3 className={cn('font-h5', pb8)}>
+                      {node.frontmatter.title}
+                    </h3>
+                    <div className={cn(styles.jobDetails)}>
+                      <MapPinLine />
+                      <p className={cn('font-p-xs', pl8)}>
+                        <b>{node.frontmatter.location}</b>
+                      </p>
+                    </div>
+                    <div className={cn(styles.jobDetails)}>
+                      <ClockClockwise />
+                      <p className={cn('font-p-xs', pl8)}>
+                        {node.frontmatter.position}
+                      </p>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid lg={6} md={6} sm={12} xs={12}>
+                  <p className={cn('font-p-sm', 'mute-85')}>
+                    {node.frontmatter.description} <b>Learn more</b>
                   </p>
-                </div>
-                <div className={cn(styles.jobDetails)}>
-                  <ClockClockwise />
-                  <p className={cn('font-p-xs', pl8)}>
-                    {node.frontmatter.position}
-                  </p>
-                </div>
-              </div>
-              <p className={cn(styles.jobDescription, 'font-p-sm', 'mute-85')}>
-                {node.frontmatter.description} <b>Learn more</b>
-              </p>
-            </Button>
-          ))}
-        </Container>
-      </Grid>
-    </Container>
+                </Grid>
+              </Button>
+            ))}
+          </Container>
+        </Grid>
+      </Container>
+    </div>
   )
 }
 
