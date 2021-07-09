@@ -30,7 +30,7 @@ export default function BlogTemplate(props: any) {
         author={fn.author}
         subtitle={fn.subtitle}
       />
-      <BlogSection alt={false}>
+      <BlogSection padded={false}>
         <MDXRenderer>{body}</MDXRenderer>
       </BlogSection>
       <Newsletter

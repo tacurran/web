@@ -3,7 +3,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 
 import BlogSection from '../components/blog-section'
-import JobsHero from '../components/layouts/jobs/jobs-hero'
 import Layout from '../components/layouts/layout/layout'
 import SEO from '../components/layouts/seo/seo'
 
@@ -18,7 +17,7 @@ export default function PageTemplate(props: any) {
         title={fn.seo?.title || fn.title}
         keywords={fn.seo?.keywords || ''}
       />
-      <BlogSection alt={false}>
+      <BlogSection padded={true}>
         <MDXRenderer>{body}</MDXRenderer>
       </BlogSection>
     </Layout>

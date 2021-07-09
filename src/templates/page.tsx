@@ -19,7 +19,7 @@ export default function PageTemplate(props: any) {
         author={fn.author}
         date={fn.lastUpdatedAt && `Last updated at ${fn.lastUpdatedAt}`}
       />
-      <BlogSection alt={false}>
+      <BlogSection padded={false}>
         <MDXRenderer>{body}</MDXRenderer>
       </BlogSection>
     </Layout>
