@@ -1,14 +1,15 @@
 import cn from 'classnames'
 import React from 'react'
 
-import { AuthorLink } from './author'
-import Container from './freestanding/containers/container'
-import Grid from './freestanding/containers/grid'
-import ContentText from './freestanding/content/content-text'
-import Molecule from './freestanding/molecule/molecule'
+import Container from '../../freestanding/containers/container'
+import Grid from '../../freestanding/containers/grid'
+import ContentText from '../../freestanding/content/content-text'
+import Molecule from '../../freestanding/molecule/molecule'
 
+import { AuthorLink } from './blog-author'
+
+import { pb16, pb24, pb32 } from '../../freestanding/utils/padding.module.css'
 import { blogHero } from './blog-hero.module.css'
-import { pb16, pb24, pb32, pb48 } from './freestanding/utils/padding.module.css'
 
 interface PropTypes {
   title: string
@@ -33,8 +34,10 @@ const BlogHero = ({ title, date, author, overline, subtitle }: PropTypes) => (
             {subtitle && (
               <p className={cn('font-p-sm', 'mute-85', pb24)}>{subtitle}</p>
             )}
-            <AuthorLink className={cn('font-p-sm')} name={author} />
-            <p className={cn('font-p-sm', 'mute-60')}>{date}</p>
+            <p className={cn('font-p-xs')}>
+              <AuthorLink name={author} /> -{' '}
+              <span className={cn('mute-85')}>{date}</span>
+            </p>
           </Molecule>
         </ContentText>
       </Grid>
