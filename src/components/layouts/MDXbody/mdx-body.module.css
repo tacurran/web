@@ -1,0 +1,158 @@
+.padded {
+  padding: 128px 0;
+}
+
+.mdx-body {
+  padding-bottom: 6rem;
+  background-color: var(--colors-base-white);
+
+  & li,
+  & code,
+  & dl,
+  & dd,
+  & dt,
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  & p {
+    color: var(--colors-base-grey--next);
+  }
+
+  & h1 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+  }
+
+  & h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 120%;
+  }
+
+  & h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  & h4 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  & h5 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 135%;
+  }
+
+  & h6 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  & p {
+    opacity: 0.85;
+    font-size: 16px;
+    line-height: 200%;
+    margin-top: 1rem;
+  }
+
+  & h1:not(:first-child),
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    margin-top: 2rem;
+  }
+
+  & ul {
+    margin-top: 1rem;
+  }
+
+  & li {
+    margin-top: 0.5rem;
+  }
+
+  & p,
+  & li {
+    & strong {
+      font-weight: 500;
+    }
+  }
+
+  & pre {
+    margin-bottom: 32px !important;
+  }
+
+  & p a {
+    transition: all ease 200ms;
+  }
+
+  & a:any-link {
+    color: var(--colors-themed-default);
+  }
+
+  & p a:hover,
+  & p a:active {
+    color: var(--colors-themed-dark--next);
+  }
+
+  & img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  & :not(pre) > code[class*='language-'] {
+    padding: 0 6px;
+    font-weight: 500;
+    word-break: break-all;
+    color: var(--colors-base-dark);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  & blockquote {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+    border-left: 3px solid var(--colors-themed-primary--next);
+    background-color: var(--colors-themed-background--next);
+  }
+
+  & blockquote p {
+    padding: 1rem;
+    font-weight: 500;
+  }
+
+  & figure {
+    margin: 2rem 0 3rem 0;
+    padding-top: 16px;
+
+    & figcaption {
+      text-align: center;
+      color: var(--colors-base-grey);
+      font-size: 0.694rem;
+      margin: 16px 0 32px;
+    }
+  }
+}
+
+@media (--sm-viewport) {
+  .section {
+    padding: 32px 0;
+  }
+}
+
+@media (--md-viewport) {
+  .section {
+    padding: 32px 0;
+  }
+}
