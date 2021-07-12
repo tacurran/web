@@ -2,7 +2,7 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 
-import BlogSection from '../components/blog-section'
+import MDXBody from '../components/layouts/MDXbody/mdx-body'
 import Layout from '../components/layouts/layout/layout'
 import SEO from '../components/layouts/seo/seo'
 
@@ -17,9 +17,9 @@ export default function PageTemplate(props: any) {
         title={fn.seo?.title || fn.title}
         keywords={fn.seo?.keywords || ''}
       />
-      <BlogSection padded={true}>
+      <MDXBody padded={true}>
         <MDXRenderer>{body}</MDXRenderer>
-      </BlogSection>
+      </MDXBody>
     </Layout>
   )
 }
