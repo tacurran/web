@@ -12,7 +12,6 @@ import React from 'react'
 
 import Button from '../../freestanding/button/button'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
-import IconWrapper from '../../freestanding/icon/icon-wrapper'
 import Footer from '../footer/footer'
 import Navigation from '../navigation/navigation'
 
@@ -371,7 +370,7 @@ const Layout = ({ children }: PropTypes) => {
             </Button>,
             <Button
               className={cn('font-h5 font-nowrap')}
-              to={'https://github.com/ory/jobs'}
+              to={'/jobs'}
               style={'link'}
               openInNewWindow={true}
             >
