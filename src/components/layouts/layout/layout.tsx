@@ -228,7 +228,7 @@ const Layout = ({ children }: PropTypes) => {
                 description: '',
                 button: (
                   <Button
-                    to={'/jobs'}
+                    to={'https://github.com/ory/jobs'}
                     style={'link'}
                     openInNewWindow={false}
                     iconRight={arrowRight}
@@ -370,7 +370,7 @@ const Layout = ({ children }: PropTypes) => {
             </Button>,
             <Button
               className={cn('font-h5 font-nowrap')}
-              to={'/jobs'}
+              to={'https://github.com/ory/jobs'}
               style={'link'}
               openInNewWindow={true}
             >
@@ -570,7 +570,7 @@ const Layout = ({ children }: PropTypes) => {
               </Button>,
               <Button
                 className={cn('font-p-sm')}
-                to={'/jobs'}
+                to={'https://github.com/ory/jobs'}
                 style={'none'}
                 openInNewWindow={true}
               >
