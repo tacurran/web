@@ -228,7 +228,7 @@ const Layout = ({ children }: PropTypes) => {
                 description: '',
                 button: (
                   <Button
-                    to={'https://github.com/ory/jobs'}
+                    to={'/jobs'}
                     style={'link'}
                     openInNewWindow={false}
                     iconRight={arrowRight}
@@ -370,7 +370,7 @@ const Layout = ({ children }: PropTypes) => {
             </Button>,
             <Button
               className={cn('font-h5 font-nowrap')}
-              to={'https://github.com/ory/jobs'}
+              to={'/jobs'}
               style={'link'}
               openInNewWindow={true}
             >
@@ -468,7 +468,7 @@ const Layout = ({ children }: PropTypes) => {
                 style={'none'}
                 openInNewWindow={true}
               >
-                Ory
+                Cloud
               </Button>,
               <Button
                 className={cn('font-p-sm')}
@@ -570,7 +570,7 @@ const Layout = ({ children }: PropTypes) => {
               </Button>,
               <Button
                 className={cn('font-p-sm')}
-                to={'https://github.com/ory/jobs'}
+                to={'/jobs'}
                 style={'none'}
                 openInNewWindow={true}
               >
