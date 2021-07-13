@@ -1,26 +1,16 @@
 import React from 'react'
 
 import Button from '../../freestanding/button/button'
-import IconWrapper from '../../freestanding/icon/icon-wrapper'
 
 const ArrowRightThemed = (
-  <IconWrapper color={'themed-primary'} icon={'ArrowRightBold'} size={'16'} />
+  <i className={'themed-primary ph-arrow-right-bold size16'} />
 )
-const Code = (
-  <IconWrapper color={'themed-primary'} icon={'CodeDuotone'} size={'32'} />
-)
-const LockOpen = (
-  <IconWrapper color={'themed-primary'} icon={'LockOpenDuotone'} size={'32'} />
-)
-const UserPlus = (
-  <IconWrapper color={'themed-primary'} icon={'UserPlusDuotone'} size={'32'} />
-)
+
+const Code = <i className={'themed-primary ph-code size32'} />
+const LockOpen = <i className={'themed-primary ph-lock-open size32'} />
+const UserPlus = <i className={'themed-primary ph-user-plus size32'} />
 const CirclesThreePlus = (
-  <IconWrapper
-    color={'themed-primary'}
-    icon={'CirclesThreePlusDuotone'}
-    size={'32'}
-  />
+  <i className={'themed-primary ph-circles-three-plus size32'} />
 )
 
 export const featuresDefault = {
