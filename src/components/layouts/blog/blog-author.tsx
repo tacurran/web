@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Button from './freestanding/button/button'
+import Button from '../../freestanding/button/button'
 
 interface Profile {
   fullname: string

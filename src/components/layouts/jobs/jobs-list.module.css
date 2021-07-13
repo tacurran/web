@@ -1,0 +1,30 @@
+.job-list {
+  background: var(--colors-base-white);
+  padding-bottom: 6rem;
+}
+
+.job-heading {
+  text-align: center;
+}
+
+.job-item {
+  background: var(--colors-themed-background--next);
+  color: var(--colors-base-grey--next);
+  border: 1px solid transparent;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  &:hover {
+    border-color: var(--colors-themed-primary--next);
+  }
+  &:last-child {
+    margin-bottom: unset;
+  }
+}
+.job-details {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex: 0 100%;
+}

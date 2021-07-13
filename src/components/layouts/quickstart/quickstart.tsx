@@ -20,7 +20,7 @@ export interface QuickstartContent {
   icon: React.ReactElement
   title: React.ReactElement
   description: React.ReactElement
-  button: React.ReactElement
+  button?: React.ReactElement
 }
 
 interface PropType {

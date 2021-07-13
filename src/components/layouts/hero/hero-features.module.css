@@ -1,0 +1,16 @@
+.hero-features {
+  padding: 128px 0;
+}
+
+.hero-features-heading {
+  text-align: center;
+}
+
+.hero-features-content {
+  display: flex;
+  flex-grow: 1;
+
+  &:nth-child(even) {
+    margin-right: unset;
+  }
+}

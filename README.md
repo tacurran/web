@@ -26,3 +26,6 @@ The text of your article...
 * `path`: The page's URL (e.g. `/about-us`). **Start with leading slash!**
 * `title`: Page title in the hero section.
 
+## Icons
+
+[phosphoricons.com](https://github.com/phosphor-icons/phosphor-react)

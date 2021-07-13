@@ -1,12 +1,9 @@
-@import '../styles/properties.css';
-
-.blog-section-alt {
+.padded {
   padding: 128px 0;
-  background-color: var(--colors-base-white);
 }
 
-.blog-section {
-  padding-top: 32px;
+.mdx-body {
+  padding-bottom: 6rem;
   background-color: var(--colors-base-white);
 
   & li,

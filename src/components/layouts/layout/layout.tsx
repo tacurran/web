@@ -12,7 +12,6 @@ import React from 'react'
 
 import Button from '../../freestanding/button/button'
 import ColourWrapper from '../../freestanding/colour/colour-wrapper'
-import IconWrapper from '../../freestanding/icon/icon-wrapper'
 import Footer from '../footer/footer'
 import Navigation from '../navigation/navigation'
 
@@ -229,7 +228,7 @@ const Layout = ({ children }: PropTypes) => {
                 description: '',
                 button: (
                   <Button
-                    to={'https://github.com/ory/jobs'}
+                    to={'/jobs'}
                     style={'link'}
                     openInNewWindow={false}
                     iconRight={arrowRight}
@@ -371,7 +370,7 @@ const Layout = ({ children }: PropTypes) => {
             </Button>,
             <Button
               className={cn('font-h5 font-nowrap')}
-              to={'https://github.com/ory/jobs'}
+              to={'/jobs'}
               style={'link'}
               openInNewWindow={true}
             >
@@ -469,7 +468,7 @@ const Layout = ({ children }: PropTypes) => {
                 style={'none'}
                 openInNewWindow={true}
               >
-                Ory
+                Cloud
               </Button>,
               <Button
                 className={cn('font-p-sm')}
@@ -547,12 +546,7 @@ const Layout = ({ children }: PropTypes) => {
                 openInNewWindow={true}
               >
                 GitHub
-              </Button>
-            ]
-          },
-          {
-            title: 'Company',
-            links: [
+              </Button>,
               <Button
                 className={cn('font-p-sm')}
                 to={'/blog'}
@@ -560,7 +554,12 @@ const Layout = ({ children }: PropTypes) => {
                 openInNewWindow={true}
               >
                 Blog
-              </Button>,
+              </Button>
+            ]
+          },
+          {
+            title: 'Company',
+            links: [
               <Button
                 className={cn('font-p-sm')}
                 to={'/about'}
@@ -571,7 +570,7 @@ const Layout = ({ children }: PropTypes) => {
               </Button>,
               <Button
                 className={cn('font-p-sm')}
-                to={'https://github.com/ory/jobs'}
+                to={'/jobs'}
                 style={'none'}
                 openInNewWindow={true}
               >

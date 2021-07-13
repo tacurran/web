@@ -1,0 +1,23 @@
+.blog-list {
+  background: var(--colors-base-white);
+  padding: 8rem;
+}
+
+.blog-heading {
+  text-align: center;
+}
+
+.blog-item {
+  background: var(--colors-themed-background--next);
+  color: var(--colors-base-grey--next);
+  border: 1px solid transparent;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  &:hover {
+    border-color: var(--colors-themed-primary--next);
+  }
+  &:last-child {
+    margin-bottom: unset;
+  }
+}

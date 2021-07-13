@@ -7,6 +7,7 @@ import { adoptersDefault } from '../components/layouts/adopters/adopters-content
 import Coding from '../components/layouts/coding/coding'
 import FeatureImage from '../components/layouts/feature-image/feature-image'
 import Features from '../components/layouts/features/features'
+import { featuresDefault } from '../components/layouts/features/features-content'
 import Hero from '../components/layouts/hero/hero'
 import Layout from '../components/layouts/layout/layout'
 import Quickstart from '../components/layouts/quickstart/quickstart'
@@ -23,26 +24,19 @@ const IndexPage = () => {
   const BookOpen = (
     <i className="ph-book-open ph-book-open-duotone base-white size24" />
   )
+
   const ArrowRightWhite = (
     <i className="ph-arrow-right-bold base-white size16" />
   )
-  const ArrowRightThemed = (
-    <i className="ph-arrow-right-bold themed-primary size16" />
-  )
+
   const Terminal = <i className="ph-terminal themed-primary size32" />
   const GitMerge = <i className="ph-git-merge themed-primary size32" />
-  const Code = <i className="ph-code themed-primary size32" />
-  const LockOpen = <i className="ph-lock-open themed-primary size32" />
-  const UserPlus = <i className="ph-user-plus themed-primary size32" />
-  const CirclesThreePlus = (
-    <i className="ph-circles-three-plus themed-primary size32" />
-  )
 
   return (
     <Layout>
       <SEO
         description={
-          'Ory is a certified and battle-tested identity solution backed by a large Open Source community and trusted by Fortune500 orgs.'
+          'Ory is a certified and battle-tested identity solution backed by a large open source community and trusted by Fortune500 orgs.'
         }
         title={'Ory - Open Source Identity Solutions For Everyone'}
         keywords={
@@ -210,63 +204,7 @@ const IndexPage = () => {
           </>
         }
       />
-
-      <Features
-        overline={'Modular Integration'}
-        title={<>Auth integration in 1.. 2.. done</>}
-        buttons={
-          <Button
-            to={'https://console.ory.sh/registration'}
-            style={'link'}
-            iconRight={ArrowRightThemed}
-          >
-            Request Access
-          </Button>
-        }
-        feature={[
-          {
-            icon: Code,
-            title: <>Ory is open source</>,
-            description: (
-              <>
-                Ory's heart and soul are rooted in Open Source. Our commitment
-                to open software will stay unchanged.
-              </>
-            )
-          },
-          {
-            icon: UserPlus,
-            title: <>No limits on identities</>,
-            description: (
-              <>
-                Dont pay for Monthly Active Users. Pay for what you use.Choose a
-                transparent plan that adapts to your needs.
-              </>
-            )
-          },
-          {
-            icon: CirclesThreePlus,
-            title: <>More features</>,
-            description: (
-              <>
-                Ory draws from a large set of features: IAM, Permissions and
-                Roles, Zero-Trust, OAuth2, OIDC, Integrations and more.
-              </>
-            )
-          },
-          {
-            icon: LockOpen,
-            title: <>No lock in</>,
-            description: (
-              <>
-                We support the migration from Ory open source to Ory as a
-                Service, and the other way around. Don't worry about lock in.
-              </>
-            )
-          }
-        ]}
-      />
-
+      <Features {...featuresDefault} />
       <Quotes {...quotesDefault} />
       <Quickstart {...quickstartDefault} />
     </Layout>

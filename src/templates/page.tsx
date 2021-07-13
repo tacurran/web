@@ -2,8 +2,8 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 
-import BlogHero from '../components/blog-hero'
-import BlogSection from '../components/blog-section'
+import MDXBody from '../components/layouts/MDXbody/mdx-body'
+import BlogHero from '../components/layouts/blog/blog-hero'
 import Layout from '../components/layouts/layout/layout'
 import SEO from '../components/layouts/seo/seo'
 
@@ -19,9 +19,9 @@ export default function PageTemplate(props: any) {
         author={fn.author}
         date={fn.lastUpdatedAt && `Last updated at ${fn.lastUpdatedAt}`}
       />
-      <BlogSection alt={false}>
+      <MDXBody padded={false}>
         <MDXRenderer>{body}</MDXRenderer>
-      </BlogSection>
+      </MDXBody>
     </Layout>
   )
 }

@@ -70,6 +70,13 @@ module.exports = {
         path: `${__dirname}/src/markdown/blog`
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `jobs`,
+        path: `${__dirname}/src/pages/jobs`
+      }
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
