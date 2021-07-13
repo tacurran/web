@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import { graphql, useStaticQuery } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 
 import Container from './freestanding/containers/container'
@@ -12,21 +12,6 @@ import { pb32, pb48 } from './freestanding/utils/padding.module.css'
 import * as styles from './team.module.css'
 
 const Team = () => {
-  const data = useStaticQuery(graphql`
-    {
-      aeneas: file(relativePath: { eq: "aeneas.png" }) {
-        childImageSharp {
-          gatsbyImageData(width: 90, height: 90, layout: FIXED)
-        }
-      }
-      thomas: file(relativePath: { eq: "thomas.png" }) {
-        childImageSharp {
-          gatsbyImageData(width: 90, height: 90, layout: FIXED)
-        }
-      }
-    }
-  `)
-
   return (
     <div className={cn(styles.team)}>
       <Container fluid={true} alignItems={'center'}>
@@ -61,7 +46,18 @@ const Team = () => {
                 href: 'https://www.linkedin.com/in/aeneasr'
               }
             ]}
-            img={data.aeneas.childImageSharp.gatsbyImageData}
+            img={
+              <StaticImage
+                placeholder="blurred"
+                layout="constrained"
+                aspectRatio={1}
+                width={180}
+                loading="lazy"
+                className="responsive"
+                alt="Ory Project Dashboard"
+                src="../images/team/aeneas.png"
+              />
+            }
           />
           <Profile
             name="Thomas Aidan Curran"
@@ -75,7 +71,165 @@ const Team = () => {
                 href: 'https://www.linkedin.com/in/thomasaidancurran/'
               }
             ]}
-            img={data.thomas.childImageSharp.gatsbyImageData}
+            img={
+              <StaticImage
+                placeholder="blurred"
+                layout="constrained"
+                aspectRatio={1}
+                width={180}
+                loading="lazy"
+                className="responsive"
+                alt="Ory Project Dashboard"
+                src="../images/team/thomas.png"
+              />
+            }
+          />
+          <Profile
+            name="Patrik Neu"
+            social={[
+              {
+                network: SocialNetworks.github,
+                href: 'https://github.com/zepatrik'
+              }
+            ]}
+            img={
+              <StaticImage
+                placeholder="blurred"
+                layout="constrained"
+                aspectRatio={1}
+                width={180}
+                loading="lazy"
+                className="responsive"
+                alt="Ory Project Dashboard"
+                src="../images/team/patrik.png"
+              />
+            }
+          />
+          <Profile
+            name="John Curran"
+            social={[
+              {
+                network: SocialNetworks.github,
+                href: 'https://github.com/jfcurran'
+              }
+            ]}
+            img={
+              <StaticImage
+                placeholder="blurred"
+                layout="constrained"
+                aspectRatio={1}
+                width={180}
+                loading="lazy"
+                className="responsive"
+                alt="Ory Project Dashboard"
+                src="../images/team/john.png"
+              />
+            }
+          />
+          <Profile
+            name="Vincent Kraus"
+            social={[
+              {
+                network: SocialNetworks.github,
+                href: 'https://github.com/vinckr'
+              }
+            ]}
+            img={
+              <StaticImage
+                placeholder="blurred"
+                layout="constrained"
+                aspectRatio={1}
+                width={180}
+                loading="lazy"
+                className="responsive"
+                alt="Ory Project Dashboard"
+                src="../images/team/vincent.png"
+              />
+            }
+          />
+          <Profile
+            name="Andreas Bucksteeg"
+            social={[
+              {
+                network: SocialNetworks.github,
+                href: 'https://github.com/tricky42'
+              }
+            ]}
+            img={
+              <StaticImage
+                placeholder="blurred"
+                layout="constrained"
+                aspectRatio={1}
+                width={180}
+                loading="lazy"
+                className="responsive"
+                alt="Ory Project Dashboard"
+                src="../images/team/andreas.png"
+              />
+            }
+          />
+          <Profile
+            name="Piotr Mścichowski"
+            social={[
+              {
+                network: SocialNetworks.github,
+                href: 'https://github.com/piotrmsc'
+              }
+            ]}
+            img={
+              <StaticImage
+                placeholder="blurred"
+                layout="constrained"
+                aspectRatio={1}
+                width={180}
+                loading="lazy"
+                className="responsive"
+                alt="Ory Project Dashboard"
+                src="../images/team/piotr.png"
+              />
+            }
+          />
+          <Profile
+            name="Jakub Blaszczyk"
+            social={[
+              {
+                network: SocialNetworks.github,
+                href: 'https://github.com/Demonsthere'
+              }
+            ]}
+            img={
+              <StaticImage
+                placeholder="blurred"
+                layout="constrained"
+                aspectRatio={1}
+                width={180}
+                loading="lazy"
+                className="responsive"
+                alt="Ory Project Dashboard"
+                src="../images/team/jakub.png"
+              />
+            }
+          />
+          <Profile
+            name="Alano Terblanche"
+            social={[
+              {
+                network: SocialNetworks.github,
+                href: 'https://github.com/Benehiko'
+              }
+            ]}
+            img={
+              <StaticImage
+                placeholder="blurred"
+                layout="constrained"
+                aspectRatio={1}
+                width={180}
+                loading="lazy"
+                className="responsive"
+                alt="Ory Project Dashboard"
+                src="../images/team/alano.png"
+              />
+            }
           />
         </Grid>
       </Container>
