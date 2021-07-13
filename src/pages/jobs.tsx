@@ -15,7 +15,7 @@ const IndexPage = () => {
     <Layout>
       <SEO
         description={
-          'Build scalable open source software at one of the fastest growing startups in the space of cloud identity'
+          'Build scalable open source software at Ory, a fast growing startup dedicated to security, identity and authorisation in the cloud.'
         }
         title={'Ory Jobs - Join The Team! '}
       />
@@ -26,10 +26,10 @@ const IndexPage = () => {
         title={'Open positions'}
         description={
           <>
-            Today, Ory powers organizations of all sizes — from single-person
-            startups to multinational enterprises - and we are only just getting
+            Organizations of all sizes — from single-person
+            startups to multinational corporation - use Ory. And we are just getting
             started. We are looking for talented, creative people to build the
-            future of Ory with us.
+            future of Ory.
           </>
         }
       />
