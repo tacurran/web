@@ -9,12 +9,11 @@
     &:active,
     &:focus {
       color: var(--colors-base-dark);
-      text-decoration: underline;
     }
   }
 
-  & a:any-link img {
-    color: var(--colors-base-grey-400--next);
+  & a:any-link i {
+    color: var(--colors-base-grey-600--next);
     transition: all ease 200ms;
 
     &:hover,
@@ -25,22 +24,3 @@
   }
 }
 
-@media (--sm-viewport) {
-  .team {
-    padding: 32px 0;
-
-    & img {
-      margin-bottom: 32px;
-    }
-  }
-}
-
-@media (--md-viewport) {
-  .team {
-    padding: 32px 0;
-
-    & img {
-      margin-bottom: 32px;
-    }
-  }
-}
