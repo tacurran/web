@@ -1,10 +1,17 @@
 import React from 'react'
 
+import Banner from '../components/layouts/banner/banner'
+import { bannerContentJobs } from '../components/layouts/banner/banner-content'
 import Layout from '../components/layouts/layout/layout'
 import SEO from '../components/layouts/seo/seo'
 import SimpleText from '../components/layouts/simple-text/simple-text'
 import Team from '../components/layouts/team/team'
-import { teamMembers } from '../components/layouts/team/team-members'
+import TeamImage from '../components/layouts/team/team-image'
+import {
+  teamCollaborators,
+  teamCommunity,
+  teamMembers
+} from '../components/layouts/team/team-members'
 
 const AboutPage = () => (
   <Layout>
@@ -27,7 +34,10 @@ const AboutPage = () => (
         </>
       }
     />
-    <Team title={'The team'} team={teamMembers} />
+    <Team {...teamMembers} />
+    <Banner {...bannerContentJobs} />
+    <Team {...teamCollaborators} />
+    <TeamImage {...teamCommunity} />
   </Layout>
 )
 
