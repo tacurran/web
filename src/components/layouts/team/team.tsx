@@ -4,17 +4,27 @@ import React from 'react'
 import Button from '../../freestanding/button/button'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
+import SimpleText from '../simple-text/simple-text'
+import SmallText from '../simple-text/small-text'
 
-import { pb32, pb8, pr8 } from '../../freestanding/utils/padding.module.css'
+import {
+  pb16,
+  pb32,
+  pb64,
+  pb8,
+  pr8
+} from '../../freestanding/utils/padding.module.css'
 import * as styles from './team.module.css'
 
 interface PropTypes {
   title: string
+  text: React.ReactElement
   team: Array<Profiles>
 }
 
 interface Profiles {
   name: string
+  position: string
   img: any
   social: SocialLinks[]
 }
@@ -23,7 +33,8 @@ export enum SocialNetworks {
   twitter,
   github,
   linkedin,
-  instagram
+  instagram,
+  web
 }
 
 type SocialLinks = {
@@ -65,6 +76,10 @@ const socialWithIcon = ({ href, network }: SocialLinks): resolvedSocial => {
       )
       alt = 'Instagram'
       break
+    case SocialNetworks.web:
+      Icon = <i className="ph-globe ph-globe-duotone base-grey-400 size24" />
+      alt = 'Website'
+      break
   }
 
   return {
@@ -74,19 +89,20 @@ const socialWithIcon = ({ href, network }: SocialLinks): resolvedSocial => {
   }
 }
 
-const Profile = ({ name, img, social }: Profiles) => (
+const Profile = ({ name, position, img, social }: Profiles) => (
   <Container
     fluid={true}
     alignItems={'start'}
     justify={'start'}
     className={cn(styles.profile)}
   >
-    <Grid lg={12} md={12} sm={12} xs={12}>
+    <Grid lg={12} md={12} sm={12} xs={12} className={cn('font-h5', pb16)}>
       {img}
     </Grid>
     <Grid lg={12} md={12} sm={12} xs={12} className={cn(styles.profileInfo)}>
       <div>
-        <h3 className={cn('font-h5', pb8)}>{name}</h3>
+        <h3 className={cn('font-h5')}>{name}</h3>
+        <p className={cn('font-p-sm', 'mute-85', pb8)}>{position}</p>
       </div>
       <div>
         <>
@@ -107,20 +123,23 @@ const Profile = ({ name, img, social }: Profiles) => (
   </Container>
 )
 
-const Team = ({ title, team }: PropTypes) => (
+const Team = ({ title, text, team }: PropTypes) => (
   <div className={cn(styles.team)}>
     <Container fluid={true} justify={'center'} alignItems={'start'}>
       <Grid lg={8} md={10} sm={12} xs={12}>
-        <div>
-          <h2 className={cn('font-h3', pb32)}>{title}</h2>
-        </div>
+        <SmallText
+          small={true}
+          title={`${title}`}
+          text={<>{text}</>}
+          className={pb64}
+        />
         <Container alignItems={'start'} justify={'start'}>
           {team.map((profile, index) => (
             <Grid
               lg={4}
-              md={10}
-              sm={12}
-              xs={12}
+              md={4}
+              sm={6}
+              xs={6}
               key={index}
               className={cn(styles.teamContent)}
             >

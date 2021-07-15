@@ -1,6 +1,6 @@
 .team {
-  background-color: var(--colors-base-light);
-  padding: 112px 0;
+  background-color: var(--colors-base-white);
+  padding-top: 112px;
 
   & a:any-link i {
     color: var(--colors-base-grey-600--next);
@@ -20,12 +20,37 @@
   & .team-content {
     display: flex;
     flex-grow: 1;
+    margin-bottom: 2rem;
   }
 }
 
-@media (--lg-viewport),(--xl-viewport) {
+@media (--lg),(--xl) {
   .team-content {
     &:nth-child(3n) {
+      margin-right: unset;
+    }
+  }
+}
+
+@media (--md) {
+  .team-content {
+    &:nth-child(3n) {
+      margin-right: unset;
+    }
+  }
+}
+
+@media (--sm) {
+  .team-content {
+    &:nth-child(even) {
+      margin-right: unset;
+    }
+  }
+}
+
+@media (--xs) {
+  .team-content {
+    &:nth-child(even) {
       margin-right: unset;
     }
   }
