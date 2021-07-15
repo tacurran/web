@@ -1,0 +1,6 @@
+.banner-primary {
+    background-color: var(--colors-base-grey--next);
+    padding: 32px 0;
+    color: var(--colors-base-white--next);
+    text-align: center;
+}
