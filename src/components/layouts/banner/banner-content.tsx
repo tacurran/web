@@ -2,12 +2,12 @@ import React from 'react'
 
 import Button from '../../freestanding/button/button'
 
-const GitMerge = <i className="ph-git-merge base-white size32" />
+const ArrowRight = <i className={'base-white ph-arrow-right-bold size16'} />
 
 export const bannerContentJobs = {
   title: "We're hiring!",
   small: true,
-  description: (
+  text: (
     <>
       Help us create an open and free standard for authentication and
       authorization that is available to everyone.
@@ -15,13 +15,8 @@ export const bannerContentJobs = {
   ),
   button: (
     <>
-      <Button
-        style={'filled'}
-        theme={'light'}
-        to={'/jobs'}
-        iconRight={GitMerge}
-      >
-        Join our Team
+      <Button to={'/jobs'} theme={'dark'} style={'link'} iconRight={ArrowRight}>
+        Join Our Team
       </Button>
     </>
   )
