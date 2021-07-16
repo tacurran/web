@@ -60,9 +60,6 @@
   display: flex;
   flex-direction: row;
   flex: 1 100%;
-  & img {
-    filter: grayscale(1);
-  }
 }
 
 .profile-info {
