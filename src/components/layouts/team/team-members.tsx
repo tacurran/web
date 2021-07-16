@@ -324,6 +324,15 @@ export const teamCollaborators = {
   ]
 }
 
+const Contributors = () => (
+  <img
+    loading="lazy"
+    alt="The Ory Community"
+    className="responsive"
+    src="https://opencollective.com/ory/contributors.svg?avatarHeight=24&width=540&button=false"
+  />
+)
+
 export const teamCommunity = {
   title: 'Our Community',
   text: (
@@ -333,12 +342,5 @@ export const teamCommunity = {
       feature requests, to contributing patches, to sponsoring our work.
     </>
   ),
-  img: (
-    <img
-      loading="lazy"
-      alt="The Ory Community"
-      className="responsive"
-      src="https://opencollective.com/ory/contributors.svg?avatarHeight=24&width=540&button=false"
-    />
-  )
+  img: <Contributors />
 }
