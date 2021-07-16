@@ -16,20 +16,20 @@ import {
 const AboutPage = () => (
   <Layout>
     <SEO
-      description="Secure open source IAM and access control infrastructure for the cloud."
+      description="Secure open source IAM, authorisation and access control infrastructure for the cloud."
       title="Ory - A modern open source identity solution"
     />
     <SimpleText
       title={'About Us'}
       text={
         <>
-          Our mission is to provide a common identity and access infrastructure
-          that manages how IAM data is used in cloud applications. We deliver
-          the data and associated analytics to members in the network in
+          Our mission is to provide a common access control, authorisation and identity infrastructure
+          that manages IAM and the associated data created in cloud applications. We deliver
+          the information and associated analytics to members in the network in
           accordance with data privacy and usage conventions. We embrace and
           practice open source software development. We base our work on
           existing and emerging open cloud standards. As developers, we will
-          continue to push the boundaries in engineering and design to help
+          continue to advance the ways we engineer and design our products to help
           other developers succeed.
         </>
       }
