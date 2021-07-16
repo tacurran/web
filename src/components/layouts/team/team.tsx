@@ -4,7 +4,6 @@ import React from 'react'
 import Button from '../../freestanding/button/button'
 import Container from '../../freestanding/containers/container'
 import Grid from '../../freestanding/containers/grid'
-import SimpleText from '../simple-text/simple-text'
 import SmallText from '../simple-text/small-text'
 
 import {

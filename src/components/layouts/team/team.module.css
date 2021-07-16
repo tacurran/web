@@ -1,6 +1,6 @@
 .team {
   background-color: var(--colors-base-white);
-  padding-top: 112px;
+  padding: 112px 0;
 
   & a:any-link i {
     color: var(--colors-base-grey-600--next);
