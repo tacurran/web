@@ -107,9 +107,10 @@ Per default, this app uses the public playground deployment of Ory Kratos at
 npm run dev
 ```
 
-If you want to use your own Ory Kratos instance, you can use the `ORY_KRATOS_URL`
-or `ORY_SDK_URL` environment variable. The easiest way to run Ory Kratos is in
-an [Ory Cloud Project](https://www.ory.sh/docs/start-building/create-project)
+If you want to use your own Ory Kratos instance, you can use the
+`ORY_KRATOS_URL` or `ORY_SDK_URL` environment variable. The easiest way to run
+Ory Kratos is in an
+[Ory Cloud Project](https://www.ory.sh/docs/start-building/create-project)
 _(free for developers)_! In that case, set the `ORY_SDK_URL` to your
 [project's SDK url](https://www.ory.sh/docs/concepts/services-api):
 
@@ -118,8 +119,8 @@ _(free for developers)_! In that case, set the `ORY_SDK_URL` to your
 export ORY_SDK_URL=https://my-project.projects.oryapis.com
 ```
 
-You may also run Ory Kratos in a local environment. A quick way to begin is to run the
-Ory Kratos Docker quickstart:
+You may also run Ory Kratos in a local environment. A quick way to begin is to
+run the Ory Kratos Docker quickstart:
 
 ```shell
 git clone --depth 1 --branch master https://github.com/ory/kratos.git
@@ -129,7 +130,8 @@ git pull -ff
 docker-compose -f quickstart.yml -f contrib/quickstart/kratos/cloud/quickstart.yml up --build --force-recreate -d
 ```
 
-In that case, set the environment variable `ORY_SDK_URL` to your local Ory Kratos instance:
+In that case, set the environment variable `ORY_SDK_URL` to your local Ory
+Kratos instance:
 
 ```shell
 # If you run Ory Kratos locally using the Docker quick start:

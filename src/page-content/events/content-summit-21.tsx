@@ -8,7 +8,8 @@ import { PropTypes as SummitNavProps } from '../../components/layouts/summit/ver
 
 export const seo: SeoProps = {
   title: 'Ory Summit 21 - The Ory Developer Conference',
-  description: 'Ory Summit is a developer conference around cloud identity infrastructure focused on but not limited to authentication, authorization, access control and security.'
+  description:
+    'Ory Summit is a developer conference around cloud identity infrastructure focused on but not limited to authentication, authorization, access control and security.'
 }
 
 export const verticalNav: SummitNavProps = {
