@@ -166,7 +166,7 @@ export const featureList: FeaturelistProps = {
             <>
               Implement the full Open Authorization 2.0 standard in your
               technology stack. Ory Hydra integrates with any open source (e.g.{' '}
-              <Button style={'link-inline'} to={'./kratos'}>
+              <Button style={'link-inline'} to={'../kratos'}>
                 Ory Kratos
               </Button>
               ) or proprietary IAM system.

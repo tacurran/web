@@ -463,7 +463,7 @@ Using `hydra token introspect` it is possible to validate an access token, and
 receive it's payload. Ory Hydra uses opaque tokens to greatly reduce attack
 vectors. You can set arbitrary data in the token. For more information on this
 head over to the
-[developer guide](https://www.ory.sh/docs/guides/master/hydra/).
+[developer guide](https://www.ory.sh/docs/guides/hydra/).
 
 You can validate access tokens using the OAuth2 Introspection API, standardized
 as [IETF OAuth2 Token Introspection](https://tools.ietf.org/html/rfc7662).
